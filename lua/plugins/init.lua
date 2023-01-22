@@ -51,5 +51,14 @@ require("lazy").setup({
     config = function()
       require("plugins.harpoon")
     end,
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {
+      "kyazdani42/nvim-web-devicons",
+    },
+    config = function()
+      require("plugins.nvim-tree")
+    end,
   }
 })
