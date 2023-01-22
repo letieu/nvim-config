@@ -33,5 +33,23 @@ require("lazy").setup({
     config = function()
       require("plugins.treesitter")
     end,
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("plugins.telescope")
+    end,
+  },
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("plugins.harpoon")
+    end,
   }
 })
