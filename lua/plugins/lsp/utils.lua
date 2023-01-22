@@ -13,7 +13,9 @@ M.on_attach = function(client, bufnr)
   map('n', '<leader>ra', vim.lsp.buf.rename, bufopts)
   map('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
   map('n', 'gr', vim.lsp.buf.references, bufopts)
-  map('n', '<leader>fm', vim.lsp.buf.formatting, bufopts)
+  map('n', '<leader>fm', function ()
+    vim.lsp.buf.format { async = true }
+  end, bufopts)
 
   map('n', '<leader>f', vim.diagnostic.open_float, bufopts)
   map('n', '[d', vim.diagnostic.goto_prev, bufopts)
