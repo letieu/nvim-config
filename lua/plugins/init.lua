@@ -27,5 +27,11 @@ require("lazy").setup({
     config = function()
       require("plugins.mason")
     end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("plugins.treesitter")
+    end,
   }
 })
