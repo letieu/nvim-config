@@ -1,5 +1,4 @@
 require("lazy").setup({
-  "folke/neodev.nvim",
   "L3MON4D3/LuaSnip",
   {
     "neovim/nvim-lspconfig",
