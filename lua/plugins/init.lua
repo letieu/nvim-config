@@ -60,5 +60,11 @@ require("lazy").setup({
     config = function()
       require("plugins.nvim-tree")
     end,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("plugins.copilot")
+    end,
   }
 })
