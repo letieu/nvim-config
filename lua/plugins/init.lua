@@ -66,5 +66,12 @@ require("lazy").setup({
     config = function()
       require("plugins.copilot")
     end,
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    config = function()
+      require("plugins.theme")
+    end,
   }
 })
