@@ -2,7 +2,7 @@ local M = {}
 local map = vim.keymap.set
 
 M.on_attach = function(client, bufnr)
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
   map('n', 'gD', vim.lsp.buf.declaration, bufopts)
   map('n', 'gd', vim.lsp.buf.definition, bufopts)
@@ -13,7 +13,7 @@ M.on_attach = function(client, bufnr)
   map('n', '<leader>ra', vim.lsp.buf.rename, bufopts)
   map('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
   map('n', 'gr', vim.lsp.buf.references, bufopts)
-  map('n', '<leader>fm', function ()
+  map('n', '<leader>fm', function()
     vim.lsp.buf.format { async = true }
   end, bufopts)
 

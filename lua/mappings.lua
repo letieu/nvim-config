@@ -1,5 +1,5 @@
 local map = vim.keymap.set
-local nore_and_silent = { noremap=true, silent=true }
+local nore_and_silent = { noremap = true, silent = true }
 
 map('n', '<C-h>', '<C-w>h', { silent = true })
 map('n', '<C-l>', '<C-w>l', { silent = true })

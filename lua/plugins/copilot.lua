@@ -15,10 +15,10 @@ require('copilot').setup({
     auto_trigger = true,
     debounce = 75,
     keymap = {
-     accept = "<M-l>",
-     next = "<M-down>",
-     prev = "<M-up",
-     dismiss = "<C-]>",
+      accept = "<M-l>",
+      next = "<M-down>",
+      prev = "<M-up",
+      dismiss = "<C-]>",
     },
   },
   filetypes = {
@@ -35,4 +35,3 @@ require('copilot').setup({
   copilot_node_command = 'node', -- Node version must be < 18
   server_opts_overrides = {},
 })
-
