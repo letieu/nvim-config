@@ -22,4 +22,10 @@ require("lazy").setup({
       require("plugins.cmp")
     end,
   },
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("plugins.mason")
+    end,
+  }
 })
