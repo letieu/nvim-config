@@ -92,5 +92,7 @@ end
 
 
 opt.relativenumber = true
-opt.foldmethod = "manual"
+
+opt.foldlevel = 20
+opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
