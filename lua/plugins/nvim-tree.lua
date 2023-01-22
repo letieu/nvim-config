@@ -1,4 +1,5 @@
 local present, nvimtree = pcall(require, "nvim-tree")
+local map = vim.keymap.set
 
 if not present then
   return
@@ -84,3 +85,5 @@ local options = {
 vim.g.nvimtree_side = options.view.side
 
 nvimtree.setup(options)
+
+map("n", "<C-n>", ":NvimTreeToggle<CR>", { silent = true })

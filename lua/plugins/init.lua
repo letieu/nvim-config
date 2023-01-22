@@ -82,5 +82,9 @@ require("lazy").setup({
         show_current_context_start = true,
       }
     end,
-  }
+  },
+  {
+    "windwp/nvim-autopairs",
+    config = true,
+  },
 })
