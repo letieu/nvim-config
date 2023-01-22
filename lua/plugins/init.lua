@@ -87,4 +87,8 @@ require("lazy").setup({
     "windwp/nvim-autopairs",
     config = true,
   },
+  {
+    "numToStr/Comment.nvim",
+    config = true
+  }
 })
