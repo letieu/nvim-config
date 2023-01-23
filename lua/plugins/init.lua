@@ -93,5 +93,14 @@ require("lazy").setup({
   {
     "luukvbaal/statuscol.nvim",
     config = true
+  },
+  {
+    "kevinhwang91/nvim-ufo",
+    dependencies = {
+      "kevinhwang91/promise-async"
+    },
+    config = function()
+      require("plugins.ufo")
+    end,
   }
 })

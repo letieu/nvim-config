@@ -45,9 +45,9 @@ opt.updatetime = 250
 opt.whichwrap:append "<>[]hl"
 
 -- fold
-opt.foldlevel = 20
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- opt.foldlevel = 20
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 g.mapleader = " "
 
