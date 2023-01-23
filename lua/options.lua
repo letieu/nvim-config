@@ -23,9 +23,9 @@ opt.swapfile = false
 
 -- Numbers
 opt.number = true
-opt.numberwidth = 2
 opt.ruler = false
 opt.relativenumber = true
+
 
 -- disable nvim intro
 opt.shortmess:append "sI"

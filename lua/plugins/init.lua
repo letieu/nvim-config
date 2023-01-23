@@ -89,5 +89,9 @@ require("lazy").setup({
   {
     "numToStr/Comment.nvim",
     config = true
+  },
+  {
+    "luukvbaal/statuscol.nvim",
+    config = true
   }
 })
