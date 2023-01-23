@@ -3,6 +3,7 @@ local g = vim.g
 
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
+opt.cmdheight = 0
 
 opt.title = true
 opt.clipboard = "unnamedplus"
@@ -43,11 +44,6 @@ opt.updatetime = 250
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
-
--- fold
--- opt.foldlevel = 20
--- opt.foldmethod = "expr"
--- opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 g.mapleader = " "
 
