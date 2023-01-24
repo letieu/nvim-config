@@ -1,6 +1,7 @@
 require("harpoon").setup {}
 local map = vim.keymap.set
 
+-- Mapping
 map('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, {})
 map('n', '<leader>a', require('harpoon.mark').add_file, {})
 
