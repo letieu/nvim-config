@@ -11,7 +11,7 @@ git clone https://github.com/letieu/nvim-config ~/.config/nvim
 2. Install server by `MasonInstall <server_name>`
 3. Install treesitter for highlight `TSInstall <name>` 
 
-## folder structure
+## Folder structure
 ```bash
 nvim
 ├── init.lua
