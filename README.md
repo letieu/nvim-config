@@ -6,6 +6,11 @@ For `rust`, `lua` and web stuff
 git clone https://github.com/letieu/nvim-config ~/.config/nvim
 ```
 
+## Easy to add new lsp
+1. Add lsp server name to `lua/plugins/lsp/init.lua`
+2. Install server by `MasonInstall <server_name>`
+3. Install treesitter for highlight `TSInstall <name>` 
+
 ## folder structure
 ```bash
 nvim
