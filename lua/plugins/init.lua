@@ -102,5 +102,9 @@ require("lazy").setup({
     config = function()
       require("plugins.ufo")
     end,
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = true,
   }
 })
