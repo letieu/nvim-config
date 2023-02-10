@@ -1,6 +1,9 @@
 local map = vim.keymap.set
 local nore_and_silent = { noremap = true, silent = true }
 
+-- ==================== General ====================
+map('n', '<ESC>', ':noh<CR>', nore_and_silent)
+
 -- ==================== Window ====================
 map('n', '<C-h>', '<C-w>h', { silent = true })
 map('n', '<C-l>', '<C-w>l', { silent = true })
