@@ -70,7 +70,14 @@ require("lazy").setup({
     "catppuccin/nvim",
     name = "catppuccin",
     config = function()
-      require("plugins.theme")
+      require("plugins.catppuccin")
+    end,
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+    name = "gruvbox",
+    config = function()
+      require("plugins.gruvbox")
     end,
   },
   {
