@@ -99,7 +99,9 @@ require("lazy").setup({
   },
   {
     "luukvbaal/statuscol.nvim",
-    config = true
+    config = function()
+      require("plugins.statuscol")
+    end,
   },
   {
     "kevinhwang91/nvim-ufo",
