@@ -4,7 +4,6 @@ local g = vim.g
 opt.showmode = false
 opt.cmdheight = 0
 opt.laststatus = 3 -- global statusline
-opt.statusline = [[%#PmenuSel#%{get(b:, "branch_name", "")}%#LineNr# %f %m %= %#CursorColumn# %{get(b:, "errors", "")} %#LineNr# %{get(b:, "wordcount", "")} %y %{&fileencoding?&fileencoding:&encoding} [%{&fileformat}] %p%% %l:%c]]
 
 opt.title = true
 opt.clipboard = "unnamedplus"

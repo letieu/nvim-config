@@ -113,5 +113,15 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
     config = true,
+  },
+  {
+    "chentoast/marks.nvim",
+    config = true,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require("plugins.lualine")
+    end,
   }
 })
