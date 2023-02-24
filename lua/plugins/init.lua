@@ -125,5 +125,11 @@ require("lazy").setup({
     config = function()
       require("plugins.lualine")
     end,
-  }
+  },
+  {
+    "sindrets/diffview.nvim",
+    config = function()
+      require("plugins.diffview")
+    end,
+  },
 })
