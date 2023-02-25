@@ -132,4 +132,10 @@ require("lazy").setup({
       require("plugins.diffview")
     end,
   },
+  {
+    "folke/todo-comments.nvim",
+    config = function()
+      require("plugins.todo-comments")
+    end,
+  }
 })

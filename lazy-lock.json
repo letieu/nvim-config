@@ -27,5 +27,6 @@
   "plenary.nvim": { "branch": "master", "commit": "1c7e3e6b0f4dd5a174fcea9fda8a4d7de593b826" },
   "promise-async": { "branch": "main", "commit": "842dca33e6b1af7bedcefc72cffbc807d54dbfca" },
   "statuscol.nvim": { "branch": "main", "commit": "5e545f98fe40498b4c93dcfaa472d7a972cec3fc" },
-  "telescope.nvim": { "branch": "master", "commit": "dce1156ca103b8222e4abbfc63f9c6887abf5ec6" }
+  "telescope.nvim": { "branch": "master", "commit": "dce1156ca103b8222e4abbfc63f9c6887abf5ec6" },
+  "todo-comments.nvim": { "branch": "main", "commit": "74c7d28cb50b0713c881ef69bcb6cdd77d8907d1" }
 }
