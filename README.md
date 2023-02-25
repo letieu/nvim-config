@@ -33,3 +33,6 @@ nvim
         ├── theme.lua
         └── treesitter.lua
 ```
+
+## Preview
+<img src="https://github.com/letieu/images/blob/master/github-preview/nvim-gruv.png?raw=true" />
