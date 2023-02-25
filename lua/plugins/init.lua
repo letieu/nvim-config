@@ -114,7 +114,9 @@ require("lazy").setup({
   },
   {
     "lewis6991/gitsigns.nvim",
-    config = true,
+    config = function()
+      require("plugins.gitsigns")
+    end,
   },
   {
     "chentoast/marks.nvim",
