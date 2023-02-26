@@ -139,5 +139,9 @@ require("lazy").setup({
     config = function()
       require("plugins.todo-comments")
     end,
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    config = true,
   }
 })
