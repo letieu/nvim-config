@@ -143,5 +143,9 @@ require("lazy").setup({
   {
     "ray-x/lsp_signature.nvim",
     config = true,
+  },
+  {
+    "lewis6991/satellite.nvim",
+    config = true,
   }
 })
