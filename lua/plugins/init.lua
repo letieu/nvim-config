@@ -1,11 +1,13 @@
 require("lazy").setup({
   "L3MON4D3/LuaSnip",
+
   {
     "neovim/nvim-lspconfig",
     config = function()
       require("plugins.lsp")
     end,
   },
+
   {
     "hrsh7th/nvim-cmp",
     -- load cmp on InsertEnter
@@ -21,18 +23,21 @@ require("lazy").setup({
       require("plugins.cmp")
     end,
   },
+
   {
     "williamboman/mason.nvim",
     config = function()
       require("plugins.mason")
     end,
   },
+
   {
     "nvim-treesitter/nvim-treesitter",
     config = function()
       require("plugins.treesitter")
     end,
   },
+
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
@@ -42,6 +47,7 @@ require("lazy").setup({
       require("plugins.telescope")
     end,
   },
+
   {
     "ThePrimeagen/harpoon",
     dependencies = {
@@ -51,6 +57,7 @@ require("lazy").setup({
       require("plugins.harpoon")
     end,
   },
+
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = {
@@ -60,19 +67,14 @@ require("lazy").setup({
       require("plugins.nvim-tree")
     end,
   },
+
   {
     "zbirenbaum/copilot.lua",
     config = function()
       require("plugins.copilot")
     end,
   },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    config = function()
-      require("plugins.catppuccin")
-    end,
-  },
+
   {
     "ellisonleao/gruvbox.nvim",
     name = "gruvbox",
@@ -80,6 +82,7 @@ require("lazy").setup({
       require("plugins.gruvbox")
     end,
   },
+
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
@@ -89,20 +92,24 @@ require("lazy").setup({
       }
     end,
   },
+
   {
     "windwp/nvim-autopairs",
     config = true,
   },
+
   {
     "numToStr/Comment.nvim",
     config = true
   },
+
   {
     "luukvbaal/statuscol.nvim",
     config = function()
       require("plugins.statuscol")
     end,
   },
+
   {
     "kevinhwang91/nvim-ufo",
     dependencies = {
@@ -112,40 +119,67 @@ require("lazy").setup({
       require("plugins.ufo")
     end,
   },
+
   {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("plugins.gitsigns")
     end,
   },
+
   {
     "chentoast/marks.nvim",
     config = true,
   },
+
   {
     "nvim-lualine/lualine.nvim",
     config = function()
       require("plugins.lualine")
     end,
   },
+
   {
     "sindrets/diffview.nvim",
     config = function()
       require("plugins.diffview")
     end,
   },
+
   {
     "folke/todo-comments.nvim",
     config = function()
       require("plugins.todo-comments")
     end,
   },
+
   {
     "ray-x/lsp_signature.nvim",
     config = true,
   },
+
   {
     "lewis6991/satellite.nvim",
     config = true,
+  },
+
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    opts = {
+      load = {
+        ["core.defaults"] = {}, -- Loads default behaviour
+        ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.norg.dirman"] = { -- Manages Neorg workspaces
+          config = {
+            workspaces = {
+              notes = "~/notes",
+            },
+            default_workspace = "notes",
+          },
+        },
+      },
+    },
+    dependencies = { { "nvim-lua/plenary.nvim" } },
   }
 })
