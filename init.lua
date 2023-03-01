@@ -16,3 +16,5 @@ require "autocmd"
 require "mappings"
 require "plugins"
 require "hl"
+require "diagnostic"
+
