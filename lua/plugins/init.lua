@@ -183,5 +183,16 @@ require("lazy").setup({
       },
     },
     dependencies = { { "nvim-lua/plenary.nvim" } },
+  },
+
+  {
+    "glepnir/lspsaga.nvim",
+    event = "BufRead",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+    dependencies = {
+      { "nvim-treesitter/nvim-treesitter" }
+    }
   }
 })
