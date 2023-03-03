@@ -1,6 +1,6 @@
 # nvim-config
 My neovim configuration. ⚡ Power full and 🔸 minimalist.
-For `rust`, `lua` and web stuff, github copilot
+For `rust`, `lua` and `web stuff`, powered lspconfig, mason, treesitter, nvim-cmp, github copilot and more
 
 ## Preview
 <img src="https://github.com/letieu/images/blob/master/github-preview/nvim-gruv.png?raw=true" />
