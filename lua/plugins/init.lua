@@ -168,6 +168,7 @@ require("lazy").setup({
   {
     "nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
+    ft = "norg",
     opts = {
       load = {
         ["core.defaults"] = {}, -- Loads default behaviour

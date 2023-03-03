@@ -8,6 +8,7 @@ opt.laststatus = 3 -- global statusline
 opt.title = true
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
+opt.spell = true
 
 -- Indenting
 opt.expandtab = true
