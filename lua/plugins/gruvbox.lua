@@ -16,6 +16,4 @@ require("gruvbox").setup({
   transparent_mode = false,
 })
 
--- setup must be called before loading
--- vim.cmd.colorscheme "catppuccin"
-vim.cmd.colorscheme "gruvbox"
+vim.cmd([[colorscheme gruvbox]])

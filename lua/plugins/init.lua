@@ -187,24 +187,18 @@ require("lazy").setup({
   },
 
   {
-    "glepnir/lspsaga.nvim",
-    event = "BufRead",
-    config = function()
-      require("lspsaga").setup({})
-    end,
-    dependencies = {
-      { "nvim-treesitter/nvim-treesitter" }
-    }
-  },
-
-  {
     "AckslD/nvim-neoclip.lua",
     dependencies = {
       { "nvim-telescope/telescope.nvim" },
     },
-    config = function ()
+    config = function()
       require("neoclip").setup()
       require("telescope").load_extension("neoclip")
     end
+  },
+
+  {
+    'NvChad/nvim-colorizer.lua',
+    config = true,
   }
 })
