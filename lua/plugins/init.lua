@@ -200,5 +200,9 @@ require("lazy").setup({
   {
     'NvChad/nvim-colorizer.lua',
     config = true,
+  },
+
+  {
+    'WhoIsSethDaniel/lualine-lsp-progress.nvim'
   }
 })
