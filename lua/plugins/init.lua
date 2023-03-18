@@ -78,6 +78,7 @@ require("lazy").setup({
   {
     "ellisonleao/gruvbox.nvim",
     name = "gruvbox",
+    priority = 1000,
     config = function()
       require("plugins.gruvbox")
     end,
@@ -85,7 +86,6 @@ require("lazy").setup({
 
   {
     "lukas-reineke/indent-blankline.nvim",
-    after = "gruvbox",
     config = function()
       require("indent_blankline").setup {
         show_current_context = true,
