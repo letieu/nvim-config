@@ -85,6 +85,7 @@ require("lazy").setup({
 
   {
     "lukas-reineke/indent-blankline.nvim",
+    after = "gruvbox",
     config = function()
       require("indent_blankline").setup {
         show_current_context = true,
@@ -199,5 +200,5 @@ require("lazy").setup({
 
   {
     'WhoIsSethDaniel/lualine-lsp-progress.nvim'
-  }
+  },
 })
