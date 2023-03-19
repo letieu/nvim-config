@@ -199,15 +199,17 @@ require("lazy").setup({
   },
 
   {
-    'WhoIsSethDaniel/lualine-lsp-progress.nvim'
-  },
-
-  {
     'projekt0n/github-nvim-theme',
     lazy = false,
     priority = 1001,
-    config = function ()
+    config = function()
       require("plugins.github-nvim-theme")
     end
+  },
+
+  {
+    "j-hui/fidget.nvim",
+    config = true,
   }
+
 })
