@@ -201,6 +201,10 @@ require("lazy").setup({
   {
     "j-hui/fidget.nvim",
     config = true,
+  },
+
+  {
+    "onsails/lspkind.nvim"
   }
 
 })
