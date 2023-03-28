@@ -1,10 +1,10 @@
 local M = {}
 local map = vim.keymap.set
+local navbuddy = require("nvim-navbuddy")
 
-M.on_attach = function(client, bufnr)
+local mapping = function()
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-  -- Mapping
   map('n', 'gD', vim.lsp.buf.declaration, bufopts)
   map('n', 'gd', vim.lsp.buf.definition, bufopts)
   map('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -23,6 +23,18 @@ M.on_attach = function(client, bufnr)
   map('n', '<leader>f', vim.diagnostic.open_float, bufopts)
   map('n', '[d', vim.diagnostic.goto_prev, bufopts)
   map('n', ']d', vim.diagnostic.goto_next, bufopts)
+
+  -- lua require("nvim-navbuddy").open()
+  map('n', '<leader>n', navbuddy.open, bufopts)
+end
+
+M.on_attach = function(client, bufnr)
+  mapping()
+  -- if client support document symbol, attach navbuddy
+  if client.server_capabilities.documentSymbol then
+    navbuddy.attach(client, bufnr)
+  end
+  navbuddy.attach(client, bufnr)
 end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
