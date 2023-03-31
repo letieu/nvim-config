@@ -30,11 +30,6 @@ end
 
 M.on_attach = function(client, bufnr)
   mapping()
-  -- if client support document symbol, attach navbuddy
-  if client.server_capabilities.documentSymbol then
-    navbuddy.attach(client, bufnr)
-  end
-  navbuddy.attach(client, bufnr)
 end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()

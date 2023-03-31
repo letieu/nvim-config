@@ -17,6 +17,12 @@ require("diffview").setup({
     fold_open = "",
     done = "✓",
   },
+  view = {
+    merge_tool = {
+      layout = "diff3_mixed",
+      winbar_info = true,
+    },
+  }
 })
 
 -- Mapping
