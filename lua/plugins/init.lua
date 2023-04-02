@@ -219,6 +219,12 @@ require("lazy").setup({
         auto_attach = true,
       }
     }
-  }
+  },
+
+  {
+    "chrisgrieser/nvim-early-retirement",
+    config = true,
+    event = "VeryLazy",
+  },
 
 })
