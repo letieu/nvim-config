@@ -219,6 +219,10 @@ require("lazy").setup({
         auto_attach = true,
       }
     }
+  },
+
+  {
+    dir = "/Users/soinmedia/tieu/projects/hacker",
   }
 
 })
