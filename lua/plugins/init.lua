@@ -227,4 +227,10 @@ require("lazy").setup({
     event = "VeryLazy",
   },
 
+  {
+    "chrisgrieser/nvim-spider",
+    config = function()
+      require("plugins.spider")
+    end,
+  },
 })
