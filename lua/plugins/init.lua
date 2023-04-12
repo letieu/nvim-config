@@ -221,8 +221,4 @@ require("lazy").setup({
     }
   },
 
-  {
-    dir = "/Users/soinmedia/tieu/projects/hacker",
-  }
-
 })
