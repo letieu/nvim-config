@@ -199,7 +199,7 @@ require("lazy").setup({
   },
 
   {
-    "j-hui/fidget.nvim",
+    "j-hui/fidget.nvim", -- Lsp progress indicator
     config = true,
   },
 
@@ -233,4 +233,21 @@ require("lazy").setup({
       require("plugins.spider")
     end,
   },
+
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require("plugins.null-ls")
+    end,
+  },
+
+  {
+    "jose-elias-alvarez/typescript.nvim",
+    config = true,
+  },
+
+  {
+    "kevinhwang91/nvim-hlslens",
+    config = true,
+  }
 })
