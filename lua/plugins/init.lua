@@ -249,5 +249,16 @@ require("lazy").setup({
   {
     "kevinhwang91/nvim-hlslens",
     config = true,
+  },
+
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("plugins.refactoring")
+    end,
   }
 })
