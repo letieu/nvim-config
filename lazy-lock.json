@@ -9,6 +9,7 @@
   "copilot.lua": { "branch": "master", "commit": "a4a37dda9e48986e5d2a90d6a3cbc88fca241dbb" },
   "diffview.nvim": { "branch": "main", "commit": "63720aa5a70ce4aa386be407d0e612cd9e63861a" },
   "fidget.nvim": { "branch": "main", "commit": "0ba1e16d07627532b6cae915cc992ecac249fb97" },
+  "format-ts-errors.nvim": { "branch": "main", "commit": "0e8b5893c7b1640de44d8dd6afeb554012141e70" },
   "github-nvim-theme": { "branch": "main", "commit": "4bed06edc2f53fceff48afff01b7ecd74c56fdad" },
   "gitsigns.nvim": { "branch": "main", "commit": "372d5cb485f2062ac74abc5b33054abac21d8b58" },
   "harpoon": { "branch": "master", "commit": "f7040fd0c44e7a4010369136547de5604b9c22a1" },

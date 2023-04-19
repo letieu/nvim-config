@@ -243,7 +243,9 @@ require("lazy").setup({
 
   {
     "jose-elias-alvarez/typescript.nvim",
-    config = true,
+    config = function()
+      require("plugins.typescript")
+    end,
   },
 
   {
@@ -260,5 +262,5 @@ require("lazy").setup({
     config = function()
       require("plugins.refactoring")
     end,
-  }
+  },
 })
