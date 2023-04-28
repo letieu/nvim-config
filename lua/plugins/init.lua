@@ -258,6 +258,6 @@ require("lazy").setup({
   },
 
   {
-    dir = "/Users/soinmedia/tieu/projects/pretty-diagnostic"
+    "/yioneko/nvim-vtsls",
   }
 })
