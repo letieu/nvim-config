@@ -263,4 +263,8 @@ require("lazy").setup({
       require("plugins.refactoring")
     end,
   },
+
+  {
+    dir = "/Users/soinmedia/tieu/projects/pretty-diagnostic"
+  }
 })

@@ -1,1 +1,1 @@
-require("typescript").setup({})
+-- require("typescript").setup({})
