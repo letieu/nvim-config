@@ -242,13 +242,6 @@ require("lazy").setup({
   },
 
   {
-    "jose-elias-alvarez/typescript.nvim",
-    config = function()
-      require("plugins.typescript")
-    end,
-  },
-
-  {
     "kevinhwang91/nvim-hlslens",
     config = true,
   },

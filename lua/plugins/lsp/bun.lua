@@ -1,8 +1,6 @@
 local M = {}
 
--- bun install -g typescript-language-server
--- bun install -g vscode-langservers-extracted
-local bun_servers = { "eslint", "tsserver", "html", "cssls" }
+local bun_servers = { "html", "cssls" }
 
 local function is_bun_server(name)
   for _, server in ipairs(bun_servers) do

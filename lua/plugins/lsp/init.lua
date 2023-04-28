@@ -8,7 +8,7 @@ local util = require "lspconfig.util"
 local servers = {
   "html",
   "cssls",
-  "tsserver",
+  "vtsls", -- instead of tsserver
   "eslint",
   "lua_ls",
   "solidity",
