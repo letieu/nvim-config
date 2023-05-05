@@ -258,6 +258,10 @@ require("lazy").setup({
   },
 
   {
-    "/yioneko/nvim-vtsls",
+    "yioneko/nvim-vtsls",
+  },
+
+  {
+    "letieu/hacker.nvim",
   }
 })
