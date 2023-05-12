@@ -154,20 +154,12 @@ require("lazy").setup({
 
   {
     "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
+    build = ":Neorg sync-parsers", -- This is the important bit!
     ft = "norg",
     opts = {
       load = {
         ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.norg.dirman"] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              notes = "~/notes",
-            },
-            default_workspace = "notes",
-          },
-        },
+        ["core.concealer"] = {}, -- Adds pretty icons to your documents
       },
     },
     dependencies = { { "nvim-lua/plenary.nvim" } },
@@ -262,6 +254,25 @@ require("lazy").setup({
   },
 
   {
-    "letieu/hacker.nvim",
+    "nvim-neotest/neotest",
+    config = function()
+      require("plugins.neotest")
+    end,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "vim-test/vim-test",
+
+      -- adapters
+      "nvim-neotest/neotest-vim-test",
+      "nvim-neotest/neotest-jest"
+    }
+  },
+
+  {
+    "aserowy/tmux.nvim",
+    config = true,
   }
+
 })
