@@ -269,10 +269,4 @@ require("lazy").setup({
       "nvim-neotest/neotest-jest"
     }
   },
-
-  {
-    "aserowy/tmux.nvim",
-    config = true,
-  }
-
 })
