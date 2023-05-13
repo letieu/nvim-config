@@ -269,4 +269,9 @@ require("lazy").setup({
       "nvim-neotest/neotest-jest"
     }
   },
+
+  {
+    "numToStr/Navigator.nvim",
+    config = true,
+  }
 })

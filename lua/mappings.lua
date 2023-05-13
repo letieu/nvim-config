@@ -5,10 +5,14 @@ local nore_and_silent = { noremap = true, silent = true }
 map('n', '<ESC>', ':noh<CR>', nore_and_silent)
 
 -- ==================== Window ====================
-map('n', '<C-h>', '<C-w>h', { silent = true })
-map('n', '<C-l>', '<C-w>l', { silent = true })
-map('n', '<C-j>', '<C-w>j', { silent = true })
-map('n', '<C-k>', '<C-w>k', { silent = true })
+-- map('n', '<C-h>', '<C-w>h', { silent = true })
+-- map('n', '<C-l>', '<C-w>l', { silent = true })
+-- map('n', '<C-j>', '<C-w>j', { silent = true })
+-- map('n', '<C-k>', '<C-w>k', { silent = true })
+map('n', '<C-h>', '<CMD>NavigatorLeft<CR>', { silent = true })
+map('n', '<C-l>', '<CMD>NavigatorRight<CR>', { silent = true })
+map('n', '<C-j>', '<CMD>NavigatorDown<CR>', { silent = true })
+map('n', '<C-k>', '<CMD>NavigatorUp<CR>', { silent = true })
 
 -- ==================== Diagnostic ====================
 map('n', '<leader>f', vim.diagnostic.open_float, nore_and_silent)
