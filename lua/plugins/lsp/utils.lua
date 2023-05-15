@@ -31,9 +31,6 @@ end
 
 M.on_attach = function(client, bufnr)
   mapping()
-  if client.server_capabilities.documentSymbolProvider then
-    navic.attach(client, bufnr)
-  end
 end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
