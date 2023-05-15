@@ -48,6 +48,8 @@ opt.whichwrap:append "<>[]hl"
 
 g.mapleader = " "
 
+
+
 -- disable some builtin vim plugins
 local default_plugins = {
   "2html_plugin",

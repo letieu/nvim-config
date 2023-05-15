@@ -214,6 +214,13 @@ require("lazy").setup({
   },
 
   {
+    "SmiteshP/nvim-navic",
+    config = function()
+      require("plugins.navic")
+    end,
+  },
+
+  {
     "chrisgrieser/nvim-early-retirement",
     config = true,
     event = "VeryLazy",
