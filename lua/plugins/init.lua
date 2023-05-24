@@ -153,19 +153,6 @@ require("lazy").setup({
   },
 
   {
-    "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers", -- This is the important bit!
-    ft = "norg",
-    opts = {
-      load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-      },
-    },
-    dependencies = { { "nvim-lua/plenary.nvim" } },
-  },
-
-  {
     "AckslD/nvim-neoclip.lua",
     dependencies = {
       { "nvim-telescope/telescope.nvim" },
@@ -273,5 +260,10 @@ require("lazy").setup({
   {
     "numToStr/Navigator.nvim",
     config = true,
-  }
+  },
+
+  {
+    "stevearc/dressing.nvim",
+    config = true,
+  },
 })
