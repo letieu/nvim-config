@@ -1,5 +1,11 @@
 require("lazy").setup({
-  "L3MON4D3/LuaSnip",
+  {
+    "L3MON4D3/LuaSnip",
+    dependencies = { "rafamadriz/friendly-snippets" },
+    config = function()
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end,
+  },
 
   {
     "neovim/nvim-lspconfig",
