@@ -272,4 +272,29 @@ require("lazy").setup({
     "stevearc/dressing.nvim",
     config = true,
   },
+
+  {
+    'tzachar/highlight-undo.nvim',
+    config = function()
+      require('highlight-undo').setup({
+        hlgroup = 'HighlightUndo',
+        duration = 300,
+        keymaps = {
+          { 'n', 'u', 'undo', {} },
+          { 'n', '<C-r>', 'redo', {} },
+        }
+      })
+    end
+  },
+
+  {
+    'dmmulroy/tsc.nvim',
+    config = true,
+  },
+
+  {
+    "m4xshen/hardtime.nvim",
+    event = "VeryLazy",
+    opts = {}
+  },
 })

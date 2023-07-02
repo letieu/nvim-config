@@ -15,7 +15,9 @@
   "friendly-snippets": { "branch": "main", "commit": "ef6547d2f586e08e071efeebac835e545f3015cc" },
   "github-nvim-theme": { "branch": "main", "commit": "20a949da713b58f28ba6af153a7d1691933ac942" },
   "gitsigns.nvim": { "branch": "main", "commit": "c18b7ca0b5b50596722f3a1572eb9b8eb520c0f1" },
+  "hardtime.nvim": { "branch": "main", "commit": "449e235ea763571ce38396cfd2748817b41fd833" },
   "harpoon": { "branch": "master", "commit": "8cb54c4003045fe1b690de96638d334de9449546" },
+  "highlight-undo.nvim": { "branch": "main", "commit": "7c87a7803d347c1311a12401c6958d27d3739708" },
   "indent-blankline.nvim": { "branch": "master", "commit": "86d1b71c5c26168c3a3a9ff5f69e833889a09c1d" },
   "lazy.nvim": { "branch": "main", "commit": "761b8388af5bcb451e30d886163fcd129278e1d1" },
   "lspkind.nvim": { "branch": "master", "commit": "57610d5ab560c073c465d6faf0c19f200cb67e6e" },
@@ -49,5 +51,6 @@
   "statuscol.nvim": { "branch": "main", "commit": "7ee8d982331019fec3a90ec87b98d6b4405cacbe" },
   "telescope.nvim": { "branch": "master", "commit": "dda9a3965b0112bea91f4afed746bcd4e2c11f52" },
   "todo-comments.nvim": { "branch": "main", "commit": "09b0b17d824d2d56f02ff15967e8a2499a89c731" },
+  "tsc.nvim": { "branch": "main", "commit": "a3661c71b7f5989885437af11c907bf760095350" },
   "vim-test": { "branch": "master", "commit": "08250c56f11cb3460c8a02c8fdb80c8d39c92173" }
 }
