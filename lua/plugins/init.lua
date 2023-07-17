@@ -185,6 +185,7 @@ require("lazy").setup({
 
   {
     "j-hui/fidget.nvim", -- Lsp progress indicator
+    tag = "legacy",
     config = true,
   },
 
@@ -210,13 +211,6 @@ require("lazy").setup({
     "chrisgrieser/nvim-early-retirement",
     config = true,
     event = "VeryLazy",
-  },
-
-  {
-    "chrisgrieser/nvim-spider",
-    config = function()
-      require("plugins.spider")
-    end,
   },
 
   {
@@ -295,5 +289,6 @@ require("lazy").setup({
   {
     "karb94/neoscroll.nvim",
     config = true,
-  }
+  },
+  
 })
