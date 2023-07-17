@@ -293,8 +293,7 @@ require("lazy").setup({
   },
 
   {
-    "m4xshen/hardtime.nvim",
-    event = "VeryLazy",
-    opts = {}
-  },
+    "karb94/neoscroll.nvim",
+    config = true,
+  }
 })
