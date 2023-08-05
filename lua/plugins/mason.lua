@@ -14,7 +14,8 @@ local options = {
     "html-lsp",
     "json-lsp",
     "rust-analyzer",
-    "typescript-language-server"
+    "typescript-language-server",
+    "dockerfile-language-server",
   },
 
   ui = {

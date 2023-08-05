@@ -12,6 +12,8 @@ local servers = {
   "eslint",
   "lua_ls",
   "solidity",
+  "dartls",
+  "dockerls",
   {
     "rust_analyzer",
     config = {
