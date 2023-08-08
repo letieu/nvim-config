@@ -3,6 +3,7 @@ local nore_and_silent = { noremap = true, silent = true }
 
 -- ==================== General ====================
 map('n', '<ESC>', ':noh<CR>', nore_and_silent)
+map('n', '<leader>s', ':w<CR>', nore_and_silent)
 
 -- ==================== Window ====================
 -- map('n', '<C-h>', '<C-w>h', { silent = true })

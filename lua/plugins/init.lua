@@ -76,6 +76,9 @@ require("lazy").setup({
 
   {
     "zbirenbaum/copilot.lua",
+    dependencies = {
+      "zbirenbaum/copilot-cmp",
+    },
     config = function()
       require("plugins.copilot")
     end,
@@ -290,5 +293,5 @@ require("lazy").setup({
     "karb94/neoscroll.nvim",
     config = true,
   },
-  
+
 })

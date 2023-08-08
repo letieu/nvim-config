@@ -1,6 +1,6 @@
 require('copilot').setup({
   panel = {
-    enabled = true,
+    enabled = false, -- use cmp
     auto_refresh = false,
     -- Mapping
     keymap = {
@@ -12,11 +12,11 @@ require('copilot').setup({
     },
   },
   suggestion = {
-    enabled = true,
+    enabled = false, -- use cmp
     auto_trigger = true,
     debounce = 75,
     keymap = {
-      accept = "<M-l>",
+      accept = "<C-f>",
       next = "<M-down>",
       prev = "<M-up",
       dismiss = "<C-]>",
@@ -36,3 +36,5 @@ require('copilot').setup({
   copilot_node_command = 'node', -- Node version must be < 18
   server_opts_overrides = {},
 })
+
+require('copilot_cmp').setup()
