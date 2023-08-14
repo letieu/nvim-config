@@ -12,13 +12,12 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ["<CR>"] = cmp.mapping.confirm {
+    ["<Tab>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
-      select = false,
+      select = true,
     },
-    ["<Tab>"] = cmp.mapping(function(fallback)
+    ["<C-Space>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif require("luasnip").expand_or_jumpable() then
@@ -30,7 +29,7 @@ cmp.setup({
       "i",
       "s",
     }),
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
+    ["<S-Space>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif require("luasnip").jumpable(-1) then
@@ -81,5 +80,8 @@ cmp.setup({
     disallow_partial_fuzzy_matching = true,
     disallow_partial_matching = true,
     disallow_prefix_unmatching = false,
+  },
+  experimental = {
+    ghost_text = true,
   },
 })
