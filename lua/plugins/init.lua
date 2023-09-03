@@ -293,4 +293,8 @@ require("lazy").setup({
     "karb94/neoscroll.nvim",
     config = true,
   },
+
+  {
+    "wintermute-cell/gitignore.nvim",
+  }
 })
