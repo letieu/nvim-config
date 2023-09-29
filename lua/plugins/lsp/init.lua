@@ -13,6 +13,7 @@ local servers = {
   "solidity",
   "dartls",
   "dockerls",
+  "gopls",
   {
     "rust_analyzer",
     config = {
