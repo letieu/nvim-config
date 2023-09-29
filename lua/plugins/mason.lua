@@ -16,6 +16,7 @@ local options = {
     "rust-analyzer",
     "typescript-language-server",
     "dockerfile-language-server",
+    "gopls",
   },
 
   ui = {
