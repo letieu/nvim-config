@@ -2,12 +2,12 @@ local on_attach = require("plugins.lsp.utils").on_attach
 local capabilities = require("plugins.lsp.utils").capabilities
 
 local lspconfig = require "lspconfig"
-local util = require "lspconfig.util"
 
 local servers = {
   "html",
   "cssls",
-  "vtsls", -- instead of tsserver
+  -- "tsserver", -- instead of tsserver
+  -- "vtsls", -- instead of tsserver
   "eslint",
   "lua_ls",
   "solidity",

@@ -154,17 +154,6 @@ require("lazy").setup({
   },
 
   {
-    "AckslD/nvim-neoclip.lua",
-    dependencies = {
-      { "nvim-telescope/telescope.nvim" },
-    },
-    config = function()
-      require("neoclip").setup()
-      require("telescope").load_extension("neoclip")
-    end
-  },
-
-  {
     'NvChad/nvim-colorizer.lua',
     config = true,
   },
@@ -179,8 +168,7 @@ require("lazy").setup({
   },
 
   {
-    "j-hui/fidget.nvim", -- Lsp progress indicator
-    tag = "legacy",
+    "j-hui/fidget.nvim",
     config = true,
   },
 
@@ -232,7 +220,20 @@ require("lazy").setup({
   },
 
   {
-    "yioneko/nvim-vtsls",
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+  },
+
+  {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-tree.lua",
+    },
+    config = function()
+      require("lsp-file-operations").setup()
+    end,
   },
 
   {
@@ -259,7 +260,7 @@ require("lazy").setup({
 
   {
     "stevearc/dressing.nvim",
-    config = true,
+    opts = {}
   },
 
   {
@@ -269,7 +270,7 @@ require("lazy").setup({
         hlgroup = 'HighlightUndo',
         duration = 300,
         keymaps = {
-          { 'n', 'u', 'undo', {} },
+          { 'n', 'u',     'undo', {} },
           { 'n', '<C-r>', 'redo', {} },
         }
       })

@@ -10,5 +10,3 @@ end, {})
 vim.keymap.set('n', '<leader>fw', builtin.live_grep, {})
 
 vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
-
-vim.keymap.set('n', '<leader>fy', ":Telescope neoclip<CR>", {})
