@@ -2,7 +2,6 @@ require 'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "c",
     "lua",
-    "help",
     "gitignore",
     "gitcommit",
     "html",
@@ -11,6 +10,7 @@ require 'nvim-treesitter.configs'.setup {
     "go",
     "javascript",
     "typescript",
+    "markdown",
   },
   sync_install = false,
   auto_install = true,
