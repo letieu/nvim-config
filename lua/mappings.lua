@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 local nore_and_silent = { noremap = true, silent = true }
+local builtin = require('telescope.builtin')
 
 -- ==================== General ====================
 map('n', '<ESC>', ':noh<CR>', nore_and_silent)
@@ -29,6 +30,32 @@ map('n', '<leader>f', vim.diagnostic.open_float, nore_and_silent)
 map('n', '[d', vim.diagnostic.goto_prev, nore_and_silent)
 map('n', ']d', vim.diagnostic.goto_next, nore_and_silent)
 
--- ==================== Plugins ====================
+-- ==================== Telescope ====================
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fa', function()
+  builtin.find_files({ hidden = true, follow = true, no_ignore = true })
+end, {})
+vim.keymap.set('n', '<leader>fw', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>ft', ":TodoTelescope keywords=TODO,FIX,FIXME,HACK <CR>", {})
+
+-- ==================== Harpoon ====================
+map('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, {})
+map('n', '<leader>a', require('harpoon.mark').add_file, {})
+
+map('n', '<Tab>', function()
+  require('harpoon.ui').nav_next(4)
+end, { noremap = true })
+
+map('n', '<S-Tab>', function()
+  require('harpoon.ui').nav_prev(4)
+end, { noremap = true })
+
+-- ==================== Git ====================
+map('n', '<leader>gh', ':Gitsigns preview_hunk<CR>', { noremap = true, silent = true })
+map('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { noremap = true, silent = true })
+map('n', '<leader>gb', ':Gitsigns blame_line<CR>', { noremap = true, silent = true })
+
+-- ==================== Another Plugins ====================
 -- keymap for plugins in lua/plugins
 -- search keyword: "Mapping"

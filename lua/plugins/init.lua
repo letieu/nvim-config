@@ -49,9 +49,7 @@ require("lazy").setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    config = function()
-      require("plugins.telescope")
-    end,
+    config = true,
   },
 
   {
@@ -59,9 +57,6 @@ require("lazy").setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    config = function()
-      require("plugins.harpoon")
-    end,
   },
 
   {
@@ -115,9 +110,7 @@ require("lazy").setup({
 
   {
     "lewis6991/gitsigns.nvim",
-    config = function()
-      require("plugins.gitsigns")
-    end,
+    config = true,
   },
 
   {
@@ -141,9 +134,7 @@ require("lazy").setup({
 
   {
     "folke/todo-comments.nvim",
-    config = function()
-      require("plugins.todo-comments")
-    end,
+    config = true,
   },
 
   {
