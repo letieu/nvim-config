@@ -57,5 +57,11 @@ map('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { noremap = true, silent = tr
 map('n', '<leader>gb', ':Gitsigns blame_line<CR>', { noremap = true, silent = true })
 
 -- ==================== Another Plugins ====================
+vim.api.nvim_set_keymap(
+  "v",
+  "<leader>rr",
+  "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+  { noremap = true }
+)
 -- keymap for plugins in lua/plugins
 -- search keyword: "Mapping"
