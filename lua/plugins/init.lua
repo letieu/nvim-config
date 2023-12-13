@@ -254,11 +254,6 @@ require("lazy").setup({
   },
 
   {
-    "numToStr/Navigator.nvim",
-    config = true,
-  },
-
-  {
     "stevearc/dressing.nvim",
     opts = {}
   },
@@ -289,5 +284,12 @@ require("lazy").setup({
 
   {
     "wintermute-cell/gitignore.nvim",
+  },
+
+  {
+    'mrjones2014/smart-splits.nvim',
+    config = function()
+      require("smart-splits")
+    end
   }
 })
