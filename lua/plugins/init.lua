@@ -211,12 +211,6 @@ require("lazy").setup({
   },
 
   {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
-  },
-
-  {
     "antosha417/nvim-lsp-file-operations",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -282,5 +276,9 @@ require("lazy").setup({
     config = function()
       require("smart-splits")
     end
+  },
+
+  {
+    "yioneko/nvim-vtsls"
   }
 })

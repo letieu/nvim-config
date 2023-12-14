@@ -7,7 +7,7 @@ local servers = {
   "html",
   "cssls",
   -- "tsserver", -- instead of tsserver
-  -- "vtsls", -- instead of tsserver
+  "vtsls", -- instead of tsserver
   "eslint",
   "lua_ls",
   "solidity",

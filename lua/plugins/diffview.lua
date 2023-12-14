@@ -1,6 +1,3 @@
-local actions = require("diffview.actions")
-local map = vim.keymap.set
-
 require("diffview").setup({
   diff_binaries = false,    -- Show diffs for binaries
   enhanced_diff_hl = false, -- See ':h diffview-config-enhanced_diff_hl'
@@ -24,9 +21,3 @@ require("diffview").setup({
     },
   }
 })
-
--- Mapping
-map('n', '<leader>do', ':DiffviewOpen<CR>', { noremap = true, silent = true })
-map('n', '<leader>dl', ':DiffviewFileHistory %<CR>', { noremap = true, silent = true })
-map('n', '<leader>dL', ':DiffviewFileHistory<CR>', { noremap = true, silent = true })
-map('n', '<leader>dc', ':DiffviewClose<CR>', { noremap = true, silent = true })

@@ -82,6 +82,3 @@ local options = {
 vim.g.nvimtree_side = options.view.side
 
 nvimtree.setup(options)
-
--- Mapping
-map("n", "<C-n>", ":NvimTreeToggle<CR>", { silent = true })
