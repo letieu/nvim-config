@@ -1,7 +1,6 @@
 local M = {}
 local map = vim.keymap.set
 local navbuddy = require("nvim-navbuddy")
-local navic = require("nvim-navic")
 
 local mapping = function()
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
