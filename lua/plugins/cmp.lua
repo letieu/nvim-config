@@ -12,38 +12,12 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ["<Tab>"] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    },
-    ["<C-Space>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif require("luasnip").expand_or_jumpable() then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true), "")
-      else
-        fallback()
-      end
-    end, {
-      "i",
-      "s",
-    }),
-    ["<S-Space>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif require("luasnip").jumpable(-1) then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
-      else
-        fallback()
-      end
-    end, {
-      "i",
-      "s",
-    }),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
   }),
   sources = cmp.config.sources({
-    { name = 'copilot' },
+    -- { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
     { name = 'orgmode' },
@@ -64,7 +38,8 @@ cmp.setup({
       local kind = require("lspkind")
           .cmp_format({
             symbol_map = { Copilot = "" },
-            mode = "symbol_text", maxwidth = 50
+            mode = "symbol_text",
+            maxwidth = 50
           })(entry, vim_item)
 
       local strings = vim.split(kind.kind, "%s", { trimempty = true })
@@ -82,6 +57,6 @@ cmp.setup({
     disallow_prefix_unmatching = false,
   },
   experimental = {
-    ghost_text = true,
+    ghost_text = false,
   },
 })
