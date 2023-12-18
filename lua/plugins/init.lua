@@ -69,16 +69,6 @@ require("lazy").setup({
     end,
   },
 
-  {
-    "zbirenbaum/copilot.lua",
-    dependencies = {
-      "zbirenbaum/copilot-cmp",
-    },
-    config = function()
-      require("plugins.copilot")
-    end,
-  },
-
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   {
@@ -280,5 +270,20 @@ require("lazy").setup({
 
   {
     "yioneko/nvim-vtsls"
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("plugins.copilot")
+    end,
+  },
+
+  {
+    'Wansmer/symbol-usage.nvim',
+    event = 'BufReadPre',
+    config = function()
+      require("plugins.symbol-usage")
+    end
   }
 })

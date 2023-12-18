@@ -37,5 +37,3 @@ require('copilot').setup({
   copilot_node_command = 'node', -- Node version must be < 18
   server_opts_overrides = {},
 })
-
-require('copilot_cmp').setup()
