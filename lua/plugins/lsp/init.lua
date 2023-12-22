@@ -11,7 +11,7 @@ local servers = {
   "eslint",
   "lua_ls",
   "solidity",
-  "dartls",
+  -- "dartls",
   "dockerls",
   "gopls",
   {

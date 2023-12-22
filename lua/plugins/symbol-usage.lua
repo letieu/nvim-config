@@ -47,4 +47,12 @@ end
 
 require('symbol-usage').setup({
   text_format = text_format,
+  disable = {
+    lsp = {
+      'dartls',
+    },
+    filetypes = {
+      'dart',
+    }
+  }
 })

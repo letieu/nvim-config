@@ -285,5 +285,16 @@ require("lazy").setup({
     config = function()
       require("plugins.symbol-usage")
     end
+  },
+
+  {
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    config = function()
+      require("plugins.flutter-tools")
+    end
   }
 })
