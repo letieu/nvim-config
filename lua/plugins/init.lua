@@ -294,4 +294,12 @@ require("lazy").setup({
       'nvim-lua/plenary.nvim',
     },
   },
+
+  {
+    'rhysd/conflict-marker.vim',
+    config = function()
+      require("plugins.conflict-marker")
+    end
+
+  }
 })
