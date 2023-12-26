@@ -293,8 +293,5 @@ require("lazy").setup({
     dependencies = {
       'nvim-lua/plenary.nvim',
     },
-    config = function()
-      require("plugins.flutter-tools")
-    end
-  }
+  },
 })

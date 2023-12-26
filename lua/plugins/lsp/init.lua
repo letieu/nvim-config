@@ -39,3 +39,21 @@ for _, lsp in ipairs(servers) do
 
   lspconfig[name].setup(config)
 end
+
+require("flutter-tools").setup {
+  widget_guides = {
+    enabled = true,
+  },
+  dev_log = {
+    enabled = true,
+    notify_errors = true,
+  },
+  dev_tools = {
+    autostart = false,
+    auto_open_browser = false,
+  },
+  lsp = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+}
