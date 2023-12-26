@@ -9,3 +9,15 @@ autocmd('TextYankPost', {
     vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
   end,
 })
+
+-- Show message when nvim loses focus (FocusLost)
+autocmd('FocusLost', {
+  group = augroup('focus_lost', {}),
+  pattern = '*',
+  callback = function()
+    -- assign v:servername to a variable
+    local servername = vim.v.servername
+    -- write the variable to a file
+    vim.fn.writefile({servername}, '/tmp/nvim-focuslost')
+  end,
+})
