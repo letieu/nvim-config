@@ -10,7 +10,7 @@ autocmd('TextYankPost', {
   end,
 })
 
--- Show message when nvim loses focus (FocusLost)
+-- Save last nvim server id when nvim loses focus (FocusLost)
 autocmd('FocusLost', {
   group = augroup('focus_lost', {}),
   pattern = '*',
