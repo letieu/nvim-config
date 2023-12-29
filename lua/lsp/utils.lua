@@ -14,6 +14,7 @@ local mapping = function(bufnr)
   map('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 
   map('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+  map('n', '<leader>cl', vim.lsp.codelens.run, bufopts)
   map('n', 'gr', vim.lsp.buf.references, bufopts)
 
   map('n', '<leader>fm', function()
@@ -25,9 +26,6 @@ local mapping = function(bufnr)
   map('n', ']d', vim.diagnostic.goto_next, bufopts)
 
   map('n', '<leader>n', navbuddy.open, bufopts)
-
-  -- codelens
-  map('n', '<leader>cl', vim.lsp.codelens.run, bufopts)
 end
 
 local function setup_codelens_refresh(client, bufnr)
@@ -56,16 +54,9 @@ local function setup_codelens_refresh(client, bufnr)
   })
 end
 
-local setup_inlay_hints = function(client, bufnr)
-  if client.server_capabilities.inlayHintProvider then
-    vim.lsp.inlay_hint.enable(0)
-  end
-end
-
 M.on_attach = function(client, bufnr)
   mapping(bufnr)
   setup_codelens_refresh(client, bufnr)
-  -- setup_inlay_hints(client, bufnr)
 end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()

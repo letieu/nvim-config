@@ -11,9 +11,9 @@ local servers = {
   "eslint",
   "lua_ls",
   "solidity",
-  -- "dartls",
   "dockerls",
   "gopls",
+  "vtsls",
   {
     "rust_analyzer",
     config = {
@@ -26,25 +26,6 @@ local servers = {
       }
     }
   },
-  {
-    "vtsls",
-    config = {
-      {
-        settings = {
-          typescript = {
-            inlayHints = {
-              parameterNames = { enabled = "literals" },
-              parameterTypes = { enabled = true },
-              variableTypes = { enabled = true },
-              propertyDeclarationTypes = { enabled = true },
-              functionLikeReturnTypes = { enabled = true },
-              enumMemberValues = { enabled = true },
-            }
-          },
-        }
-      }
-    }
-  }
 }
 
 for _, lsp in ipairs(servers) do

@@ -13,7 +13,6 @@ require("lazy").setup({
 
   {
     "hrsh7th/nvim-cmp",
-    -- load cmp on InsertEnter
     event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
@@ -206,23 +205,6 @@ require("lazy").setup({
     config = function()
       require("lsp-file-operations").setup()
     end,
-  },
-
-  {
-    "nvim-neotest/neotest",
-    config = function()
-      require("plugins.neotest")
-    end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim",
-      "vim-test/vim-test",
-
-      -- adapters
-      "nvim-neotest/neotest-vim-test",
-      "nvim-neotest/neotest-jest"
-    }
   },
 
   {
