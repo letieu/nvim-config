@@ -161,19 +161,6 @@ require("lazy").setup({
   },
 
   {
-    "chrisgrieser/nvim-early-retirement",
-    config = true,
-    event = "VeryLazy",
-  },
-
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-      require("plugins.null-ls")
-    end,
-  },
-
-  {
     "kevinhwang91/nvim-hlslens",
     config = true,
   },
@@ -250,14 +237,6 @@ require("lazy").setup({
       require("plugins.copilot")
     end,
   },
-
-  -- {
-  --   'Wansmer/symbol-usage.nvim',
-  --   event = 'BufReadPre',
-  --   config = function()
-  --     require("plugins.symbol-usage")
-  --   end
-  -- },
 
   {
     'akinsho/flutter-tools.nvim',
