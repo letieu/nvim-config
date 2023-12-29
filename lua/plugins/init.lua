@@ -300,6 +300,10 @@ require("lazy").setup({
     config = function()
       require("plugins.conflict-marker")
     end
+  },
 
+  {
+    'chrisgrieser/nvim-recorder',
+    opts = {},
   }
 })
