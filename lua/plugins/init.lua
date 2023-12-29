@@ -259,5 +259,12 @@ require("lazy").setup({
   {
     'chrisgrieser/nvim-recorder',
     opts = {},
+  },
+
+  {
+    'gptlang/CopilotChat.nvim',
+    dependencies = {
+      'nvim/copilot.lua'
+    }
   }
 })
