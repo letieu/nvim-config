@@ -9,9 +9,6 @@ require("lazy").setup({
 
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      require("plugins.lsp")
-    end,
   },
 
   {
@@ -279,13 +276,13 @@ require("lazy").setup({
     end,
   },
 
-  {
-    'Wansmer/symbol-usage.nvim',
-    event = 'BufReadPre',
-    config = function()
-      require("plugins.symbol-usage")
-    end
-  },
+  -- {
+  --   'Wansmer/symbol-usage.nvim',
+  --   event = 'BufReadPre',
+  --   config = function()
+  --     require("plugins.symbol-usage")
+  --   end
+  -- },
 
   {
     'akinsho/flutter-tools.nvim',
@@ -293,6 +290,9 @@ require("lazy").setup({
     dependencies = {
       'nvim-lua/plenary.nvim',
     },
+    config = function()
+      require("plugins.flutter-tools")
+    end
   },
 
   {

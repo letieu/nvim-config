@@ -1,5 +1,5 @@
-local on_attach = require("plugins.lsp.utils").on_attach
-local capabilities = require("plugins.lsp.utils").capabilities
+local on_attach = require("lsp.utils").on_attach
+local capabilities = require("lsp.utils").capabilities
 
 require("flutter-tools").setup {
   widget_guides = {

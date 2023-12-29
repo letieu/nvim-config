@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require "plugins"
+require "lsp"
 require "options"
 require "autocmd"
 require "mappings"

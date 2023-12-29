@@ -65,6 +65,7 @@ map(
 )
 
 map("n", "<C-n>", ":NvimTreeToggle<CR>", { silent = true })
+
 map('n', 'zR', require('ufo').openAllFolds)
 map('n', 'zM', require('ufo').closeAllFolds)
 
@@ -72,6 +73,3 @@ map('n', '<leader>do', ':DiffviewOpen<CR>', { noremap = true, silent = true })
 map('n', '<leader>dl', ':DiffviewFileHistory %<CR>', { noremap = true, silent = true })
 map('n', '<leader>dL', ':DiffviewFileHistory<CR>', { noremap = true, silent = true })
 map('n', '<leader>dc', ':DiffviewClose<CR>', { noremap = true, silent = true })
-
--- keymap for plugins in lua/plugins
--- search keyword: "Mapping"
