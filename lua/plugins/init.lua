@@ -78,13 +78,6 @@ require("lazy").setup({
   },
 
   {
-    "luukvbaal/statuscol.nvim",
-    config = function()
-      require("plugins.statuscol")
-    end,
-  },
-
-  {
     "kevinhwang91/nvim-ufo",
     dependencies = {
       "kevinhwang91/promise-async"
