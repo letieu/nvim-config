@@ -4,7 +4,7 @@ My neovim configuration. ⚡ Power full and 🔸 minimalist.
 Powered lspconfig, mason, treesitter, nvim-cmp, github copilot and more.
 
 ## Preview
-<img src="https://github.com/letieu/images/blob/master/github-preview/nvim-gruv.png?raw=true" />
+<img src="https://github.com/letieu/images/blob/master/github-preview/nvim-github-light.png?raw=true" />
 
 ## Setup
 
