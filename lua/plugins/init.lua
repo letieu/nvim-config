@@ -65,7 +65,7 @@ require("lazy").setup({
     end,
   },
 
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
 
   {
     "windwp/nvim-autopairs",
@@ -250,21 +250,19 @@ require("lazy").setup({
   },
 
   {
-    'rhysd/conflict-marker.vim',
-    config = function()
-      require("plugins.conflict-marker")
-    end
-  },
-
-  {
     'chrisgrieser/nvim-recorder',
     opts = {},
   },
 
   {
-    'gptlang/CopilotChat.nvim',
-    dependencies = {
-      'nvim/copilot.lua'
-    }
-  }
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+
+  { 'akinsho/git-conflict.nvim',           version = "*", config = true }
 })
