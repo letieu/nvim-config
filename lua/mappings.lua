@@ -39,6 +39,10 @@ map('n', '<leader>fw', builtin.live_grep, {})
 map('n', '<leader>fd', builtin.diagnostics, {})
 map('n', '<leader>ft', ":TodoTelescope keywords=TODO,FIX,FIXME,HACK <CR>", {})
 
+-- ==================== Quickfix ====================
+map('n', '<leader>qn', ':cnext<CR>', nore_and_silent) -- next quickfix
+map('n', '<leader>qp', ':cprev<CR>', nore_and_silent) -- previous quickfix
+
 -- ==================== Harpoon ====================
 map('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, {})
 map('n', '<leader>a', require('harpoon.mark').add_file, {})
