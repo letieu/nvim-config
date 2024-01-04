@@ -46,8 +46,8 @@ map(
 )
 
 -- ==================== Quickfix ====================
-map('n', '<leader>[q', ':cprev<CR>', nore_and_silent) -- previous quickfix
-map('n', '<leader>]q', ':cnext<CR>', nore_and_silent) -- next quickfix
+map('n', '[q', ':cprev<CR>', nore_and_silent) -- previous quickfix
+map('n', ']q', ':cnext<CR>', nore_and_silent) -- next quickfix
 
 -- ==================== Harpoon ====================
 map('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, {})
