@@ -38,10 +38,16 @@ end, {})
 map('n', '<leader>fw', builtin.live_grep, {})
 map('n', '<leader>fd', builtin.diagnostics, {})
 map('n', '<leader>ft', ":TodoTelescope keywords=TODO,FIX,FIXME,HACK <CR>", {})
+map(
+  "v",
+  "<leader>rr",
+  "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+  { noremap = true }
+)
 
 -- ==================== Quickfix ====================
-map('n', '<leader>qn', ':cnext<CR>', nore_and_silent) -- next quickfix
-map('n', '<leader>qp', ':cprev<CR>', nore_and_silent) -- previous quickfix
+map('n', '<leader>[q', ':cprev<CR>', nore_and_silent) -- previous quickfix
+map('n', '<leader>]q', ':cnext<CR>', nore_and_silent) -- next quickfix
 
 -- ==================== Harpoon ====================
 map('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, {})
@@ -61,13 +67,6 @@ map('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { noremap = true, silent = tr
 map('n', '<leader>gb', ':Gitsigns blame_line<CR>', { noremap = true, silent = true })
 
 -- ==================== Another Plugins ====================
-map(
-  "v",
-  "<leader>rr",
-  "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
-  { noremap = true }
-)
-
 map("n", "<C-n>", ":NvimTreeToggle<CR>", { silent = true })
 
 map('n', 'zR', require('ufo').openAllFolds)
