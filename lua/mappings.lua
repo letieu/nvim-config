@@ -4,7 +4,7 @@ local nore_and_silent = { noremap = true, silent = true }
 
 -- ==================== General ====================
 map('n', '<ESC>', ':noh<CR>', nore_and_silent)
-map('n', '<leader>s', ':w<CR>', nore_and_silent)
+map('n', '<leader>w', ':w<CR>', nore_and_silent)
 
 -- ==================== Window ====================
 -- resizing splits
