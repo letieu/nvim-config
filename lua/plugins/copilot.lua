@@ -2,7 +2,7 @@ return {
   "zbirenbaum/copilot.lua",
   opts = {
     panel = {
-      enabled = true, -- use cmp
+      enabled = true,
       auto_refresh = false,
       -- Mapping
       keymap = {

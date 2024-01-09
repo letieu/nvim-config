@@ -1,8 +1,15 @@
 return {
   { "neovim/nvim-lspconfig" },
-  { "nvim-telescope/telescope.nvim",       config = true,                             dependencies = { "nvim-lua/plenary.nvim" } },
-  { "ThePrimeagen/harpoon",                dependencies = { "nvim-lua/plenary.nvim" } },
-  { "lukas-reineke/indent-blankline.nvim", config = true,                             main = "ibl", },
+  {
+    "nvim-telescope/telescope.nvim",
+    config = true,
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  { "lukas-reineke/indent-blankline.nvim", config = true, main = "ibl", },
   { "windwp/nvim-autopairs",               config = true },
   { "numToStr/Comment.nvim",               config = true },
   { "lewis6991/gitsigns.nvim",             config = true },
@@ -18,6 +25,6 @@ return {
   { 'mrjones2014/smart-splits.nvim',       config = true },
   { "yioneko/nvim-vtsls" },
   { 'chrisgrieser/nvim-recorder',          config = true },
-  { 'akinsho/git-conflict.nvim',           config = true,                             version = "*" },
+  { 'akinsho/git-conflict.nvim',           config = true, version = "*" },
   { "Eandrju/cellular-automaton.nvim" },
 }
