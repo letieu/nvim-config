@@ -49,18 +49,6 @@ map(
 map('n', '[q', ':cprev<CR>', nore_and_silent) -- previous quickfix
 map('n', ']q', ':cnext<CR>', nore_and_silent) -- next quickfix
 
--- ==================== Harpoon ====================
-map('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, {})
-map('n', '<leader>a', require('harpoon.mark').add_file, {})
-
-map('n', '<Tab>', function()
-  require('harpoon.ui').nav_next(4)
-end, { noremap = true })
-
-map('n', '<S-Tab>', function()
-  require('harpoon.ui').nav_prev(4)
-end, { noremap = true })
-
 -- ==================== Git ====================
 map('n', '<leader>gh', ':Gitsigns preview_hunk<CR>', { noremap = true, silent = true })
 map('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', { noremap = true, silent = true })

@@ -9,7 +9,6 @@ local mapping = function(bufnr)
   map('n', 'gd', vim.lsp.buf.definition, bufopts)
   map('n', 'K', vim.lsp.buf.hover, bufopts)
   map('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  map('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
   map('n', '<leader>ra', vim.lsp.buf.rename, bufopts)
   map('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 

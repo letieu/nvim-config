@@ -1,14 +1,6 @@
 return {
   { "neovim/nvim-lspconfig" },
-  {
-    "nvim-telescope/telescope.nvim",
-    config = true,
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
-  {
-    "ThePrimeagen/harpoon",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
+  { "nvim-telescope/telescope.nvim", config = true, dependencies = { "nvim-lua/plenary.nvim" } },
   { "lukas-reineke/indent-blankline.nvim", config = true, main = "ibl", },
   { "windwp/nvim-autopairs",               config = true },
   { "numToStr/Comment.nvim",               config = true },
