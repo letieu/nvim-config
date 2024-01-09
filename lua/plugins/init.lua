@@ -1,283 +1,43 @@
-require("lazy").setup({
-  {
-    "L3MON4D3/LuaSnip",
-    dependencies = { "rafamadriz/friendly-snippets" },
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
-    end,
-  },
+return {
+  { "neovim/nvim-lspconfig" },
 
-  {
-    "neovim/nvim-lspconfig",
-  },
+  { "nvim-telescope/telescope.nvim",       config = true,                             dependencies = { "nvim-lua/plenary.nvim" } },
 
-  {
-    "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-cmdline",
-      "saadparwaiz1/cmp_luasnip"
-    },
-    config = function()
-      require("plugins.cmp")
-    end,
-  },
+  { "ThePrimeagen/harpoon",                dependencies = { "nvim-lua/plenary.nvim" } },
 
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require("plugins.mason")
-    end,
-  },
+  { "lukas-reineke/indent-blankline.nvim", config = true,                             main = "ibl", },
 
-  {
-    "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("plugins.treesitter")
-    end,
-  },
+  { "windwp/nvim-autopairs",               config = true },
 
-  {
-    "nvim-telescope/telescope.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = true,
-  },
+  { "numToStr/Comment.nvim",               config = true },
 
-  {
-    "ThePrimeagen/harpoon",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
+  { "lewis6991/gitsigns.nvim",             config = true },
 
-  {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = {
-      "kyazdani42/nvim-web-devicons",
-    },
-    config = function()
-      require("plugins.nvim-tree")
-    end,
-  },
+  { "chentoast/marks.nvim",                config = true },
 
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl",  opts = {} },
+  { "folke/todo-comments.nvim",            config = true },
 
-  {
-    "windwp/nvim-autopairs",
-    config = true,
-  },
+  { 'NvChad/nvim-colorizer.lua',           config = true },
 
-  {
-    "numToStr/Comment.nvim",
-    config = true
-  },
+  { "j-hui/fidget.nvim",                   config = true },
 
-  {
-    "kevinhwang91/nvim-ufo",
-    dependencies = {
-      "kevinhwang91/promise-async"
-    },
-    config = function()
-      require("plugins.ufo")
-    end,
-  },
+  { "onsails/lspkind.nvim" },
 
-  {
-    "lewis6991/gitsigns.nvim",
-    config = true,
-  },
+  { "kevinhwang91/nvim-hlslens",           config = true },
 
-  {
-    "chentoast/marks.nvim",
-    config = true,
-  },
+  { "stevearc/dressing.nvim",              config = true },
 
-  {
-    "nvim-lualine/lualine.nvim",
-    config = function()
-      require("plugins.lualine")
-    end,
-  },
+  { "karb94/neoscroll.nvim",               config = true },
 
-  {
-    "sindrets/diffview.nvim",
-    config = function()
-      require("plugins.diffview")
-    end,
-  },
+  { "wintermute-cell/gitignore.nvim" },
 
-  {
-    "folke/todo-comments.nvim",
-    config = true,
-  },
+  { 'mrjones2014/smart-splits.nvim',       config = true },
 
-  {
-    "lewis6991/satellite.nvim",
-    config = function()
-      require("plugins.satellite")
-    end,
-  },
+  { "yioneko/nvim-vtsls" },
 
-  {
-    'NvChad/nvim-colorizer.lua',
-    config = true,
-  },
+  { 'chrisgrieser/nvim-recorder',          config = true },
 
-  {
-    'projekt0n/github-nvim-theme',
-    lazy = false,
-    priority = 1001,
-    config = function()
-      require("plugins.github-nvim-theme")
-    end
-  },
+  { 'akinsho/git-conflict.nvim',           config = true,                             version = "*" },
 
-  {
-    "j-hui/fidget.nvim",
-    config = true,
-  },
-
-  {
-    "onsails/lspkind.nvim"
-  },
-
-  {
-    "SmiteshP/nvim-navbuddy",
-    dependencies = {
-      "neovim/nvim-lspconfig",
-      "SmiteshP/nvim-navic",
-      "MunifTanjim/nui.nvim"
-    },
-    opts = {
-      lsp = {
-        auto_attach = true,
-      }
-    }
-  },
-
-  {
-    "kevinhwang91/nvim-hlslens",
-    config = true,
-  },
-
-  {
-    "ThePrimeagen/refactoring.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-      require("plugins.refactoring")
-    end,
-  },
-
-  {
-    "antosha417/nvim-lsp-file-operations",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-tree.lua",
-    },
-    config = function()
-      require("lsp-file-operations").setup()
-    end,
-  },
-
-  {
-    "stevearc/dressing.nvim",
-    opts = {}
-  },
-
-  {
-    'tzachar/highlight-undo.nvim',
-    config = function()
-      require('highlight-undo').setup({
-        hlgroup = 'HighlightUndo',
-        duration = 300,
-        keymaps = {
-          { 'n', 'u',     'undo', {} },
-          { 'n', '<C-r>', 'redo', {} },
-        }
-      })
-    end
-  },
-
-  {
-    'dmmulroy/tsc.nvim',
-    config = true,
-  },
-
-  {
-    "karb94/neoscroll.nvim",
-    config = true,
-  },
-
-  {
-    "wintermute-cell/gitignore.nvim",
-  },
-
-  {
-    'mrjones2014/smart-splits.nvim',
-    config = function()
-      require("smart-splits")
-    end
-  },
-
-  {
-    "yioneko/nvim-vtsls"
-  },
-
-  {
-    "zbirenbaum/copilot.lua",
-    config = function()
-      require("plugins.copilot")
-    end,
-  },
-
-  {
-    'akinsho/flutter-tools.nvim',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-    config = function()
-      require("plugins.flutter-tools")
-    end
-  },
-
-  {
-    'chrisgrieser/nvim-recorder',
-    opts = {},
-  },
-
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && yarn install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-  },
-
-  { 'akinsho/git-conflict.nvim',           version = "*", config = true },
-
-  {
-    "Eandrju/cellular-automaton.nvim"
-  },
-
-  {
-    'Wansmer/treesj',
-    keys = {
-      '<space>m',
-      '<space>j',
-      '<space>s',
-    },
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    config = true
-  }
-})
+  { "Eandrju/cellular-automaton.nvim" },
+}

@@ -16,6 +16,6 @@ autocmd('FocusLost', {
   pattern = '*',
   callback = function()
     local servername = vim.v.servername
-    vim.fn.writefile({servername}, '/tmp/nvim-focuslost')
+    vim.fn.writefile({ servername }, '/tmp/nvim-focuslost')
   end,
 })
