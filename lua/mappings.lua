@@ -38,6 +38,7 @@ end, {})
 map('n', '<leader>fw', builtin.live_grep, {})
 map('n', '<leader>fd', builtin.diagnostics, {})
 map('n', '<leader>ft', ":TodoTelescope keywords=TODO,FIX,FIXME,HACK <CR>", {})
+map('n', '<leader>gs', "<cmd>Telescope git_status theme=ivy<cr>", {})
 
 -- ==================== Quickfix ====================
 map('n', '[q', ':cprev<CR>', nore_and_silent) -- previous quickfix
