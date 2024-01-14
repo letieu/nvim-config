@@ -7,7 +7,6 @@ return {
   { "lewis6991/gitsigns.nvim",             config = true },
   { "chentoast/marks.nvim",                config = true },
   { "folke/todo-comments.nvim",            config = true },
-  { 'NvChad/nvim-colorizer.lua',           config = true },
   { "j-hui/fidget.nvim",                   config = true },
   { "onsails/lspkind.nvim" },
   { "kevinhwang91/nvim-hlslens",           config = true },
