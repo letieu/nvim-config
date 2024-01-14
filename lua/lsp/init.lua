@@ -1,7 +1,5 @@
-local on_attach = require("lsp.utils").on_attach
-local capabilities = require("lsp.utils").capabilities
-
 local lspconfig = require "lspconfig"
+local capabilities = require("lsp.utils").capabilities
 
 require("lspconfig.configs").vtsls = require("vtsls").lspconfig
 
@@ -29,7 +27,7 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-  local config = { on_attach = on_attach, capabilities = capabilities }
+  local config = { capabilities = capabilities }
   local name = lsp;
 
   if type(lsp) == "table" then
