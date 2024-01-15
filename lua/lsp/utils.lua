@@ -12,7 +12,7 @@ local mapping = function(buf)
   map('n', '<leader>ra', vim.lsp.buf.rename, bufopts)
   map('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 
-  map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+  map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, bufopts)
 
   map('n', '<leader>cl', vim.lsp.codelens.run, bufopts)
   map('n', 'gr', vim.lsp.buf.references, bufopts)
