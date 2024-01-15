@@ -6,19 +6,14 @@ return {
       auto_refresh = false,
       -- Mapping
       keymap = {
-        jump_prev = "[[",
-        jump_next = "]]",
         accept = "<CR>",
-        refresh = "gr",
-        open = "<M-CR>"
       },
     },
     suggestion = {
-      enabled = true, -- use cmp
+      enabled = true,
       auto_trigger = true,
-      debounce = 75,
+      debounce = 50,
       keymap = {
-        -- accept = "<C-f>",
         accept = "<Tab>",
         next = "<M-down>",
         prev = "<M-up",
