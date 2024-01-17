@@ -32,7 +32,14 @@ return {
               height = "90%",
             },
           },
+          minimal = {
+            size = {
+              width = "40%",
+              height = "35%",
+            },
+          },
         },
+
         create_layout = function(picker)
           local border = {
             results = {
@@ -168,6 +175,11 @@ return {
           }
 
           local function get_box()
+            if picker.prompt_title == "Code actions" then
+              picker.layout_strategy = "minimal"
+              return box_by_kind["minimal"], "minimal"
+            end
+
             local strategy = picker.layout_strategy
             if strategy == "vertical" or strategy == "horizontal" then
               return box_by_kind[strategy], strategy
@@ -200,7 +212,7 @@ return {
           end
 
           local function get_layout_size(box_kind)
-            return picker.layout_config[box_kind == "minimal" and "vertical" or box_kind].size
+            return picker.layout_config[box_kind].size
           end
 
           local box, box_kind = get_box()
