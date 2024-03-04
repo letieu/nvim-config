@@ -20,33 +20,38 @@ git clone https://github.com/letieu/nvim-config ~/.config/nvim
 ## Folder structure
 ```bash
 nvim
+├── README.md
 ├── init.lua
 └── lua
     ├── autocmd.lua
     ├── diagnostic.lua
-    ├── hl.lua
+    ├── lsp
+    │   ├── init.lua
+    │   └── utils.lua
     ├── mappings.lua
     ├── options.lua
     └── plugins
-        ├── lsp
-        │   ├── bun.lua
-        │   ├── init.lua
-        │   └── utils.lua
         ├── cmp.lua
         ├── copilot.lua
         ├── diffview.lua
-        ├── gitsigns.lua
-        ├── gruvbox.lua
+        ├── flutter-tools.lua
+        ├── github-nvim-theme.lua
+        ├── hardtime.lua
         ├── harpoon.lua
+        ├── hawtkeys.lua
+        ├── highlight-undo.lua
         ├── init.lua
+        ├── lua-snip.lua
         ├── lualine.lua
+        ├── markdown-preview.lua
         ├── mason.lua
+        ├── nvim-lsp-file-operations.lua
+        ├── nvim-navbuddy.lua
         ├── nvim-tree.lua
         ├── satellite.lua
-        ├── statuscol.lua
         ├── telescope.lua
-        ├── todo-comments.lua
         ├── treesitter.lua
-        └── ufo.lua
-
+        ├── treesj.lua
+        ├── ufo.lua
+        └── undo-tree.lua
 ```
