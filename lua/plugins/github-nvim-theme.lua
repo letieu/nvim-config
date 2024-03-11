@@ -4,7 +4,6 @@ return {
   priority = 1001,
   config = function()
     require('github-theme').setup()
-
-    vim.cmd('colorscheme github_light')
+    -- vim.cmd('colorscheme github_light')
   end
 }

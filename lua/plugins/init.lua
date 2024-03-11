@@ -17,4 +17,5 @@ return {
   { 'chrisgrieser/nvim-recorder',          config = true },
   { 'akinsho/git-conflict.nvim',           config = true, version = "*" },
   { "Eandrju/cellular-automaton.nvim" },
+  { "dmmulroy/tsc.nvim",                   config = true }
 }
