@@ -2,7 +2,7 @@ local opt = vim.opt
 local g = vim.g
 
 opt.showmode = false
-opt.cmdheight = 0
+opt.cmdheight = 1
 opt.laststatus = 3 -- global statusline
 
 vim.o.foldcolumn = '0' -- '0' is not bad
@@ -34,10 +34,6 @@ opt.swapfile = false
 opt.number = true
 opt.ruler = false
 opt.relativenumber = true
-
-
--- disable nvim intro
-opt.shortmess:append "sI"
 
 opt.signcolumn = "yes"
 opt.splitbelow = true
@@ -94,7 +90,7 @@ end
 local default_providers = {
   "node",
   "perl",
-  -- "python3",
+  "python3",
   "ruby",
 }
 
