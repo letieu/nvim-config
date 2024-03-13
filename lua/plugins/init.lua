@@ -14,7 +14,6 @@ return {
   { "wintermute-cell/gitignore.nvim" },
   { 'mrjones2014/smart-splits.nvim',       config = true },
   { "yioneko/nvim-vtsls" },
-  { 'chrisgrieser/nvim-recorder',          config = true },
   { 'akinsho/git-conflict.nvim',           config = true, version = "*" },
   { "Eandrju/cellular-automaton.nvim" },
   { "dmmulroy/tsc.nvim",                   config = true }
