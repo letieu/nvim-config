@@ -2,7 +2,7 @@ local opt = vim.opt
 local g = vim.g
 
 opt.showmode = false
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.laststatus = 3 -- global statusline
 
 vim.o.foldcolumn = '0' -- '0' is not bad
