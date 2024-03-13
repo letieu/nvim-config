@@ -11,7 +11,6 @@ local function harpoon_status()
   local status = ""
 
   for i = 1, length do
-    -- status = status .. " " .. char[i]
     local value = list:get(i).value
     local full_path = root_dir .. "/" .. value
     if full_path == current_file_path then
@@ -24,8 +23,17 @@ local function harpoon_status()
   return [[ 󰀱 ]] .. status
 end
 
+local function recorder_status()
+  return require("recorder").recordingStatus()
+end
+
+local function recorder_slots()
+  return require("recorder").displaySlots()
+end
+
 return {
   "nvim-lualine/lualine.nvim",
+  dependencies = { "ThePrimeagen/harpoon", "chrisgrieser/nvim-recorder" },
   opts = {
     options = {
       icons_enabled = true,
@@ -48,9 +56,13 @@ return {
       lualine_a = { 'mode' },
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { '%=', harpoon_status },
-      lualine_x = { 'filename', 'fileformat', 'filetype' },
-      lualine_y = { 'progress' },
-      lualine_z = { 'location' }
+      lualine_x = { 'filename' },
+      lualine_y = {
+        recorder_status,
+      },
+      lualine_z = {
+        recorder_slots,
+      }
     },
     inactive_sections = {
       lualine_a = {},

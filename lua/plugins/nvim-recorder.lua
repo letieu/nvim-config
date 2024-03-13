@@ -27,7 +27,7 @@ return {
     -- If enabled, only critical notifications are sent.
     -- If you do not use a plugin like nvim-notify, set this to `true`
     -- to remove otherwise annoying messages.
-    lessNotifications = false,
+    lessNotifications = true,
 
     -- Use nerdfont icons in the status bar components and keymap descriptions
     useNerdfontIcons = true,
