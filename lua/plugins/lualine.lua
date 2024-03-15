@@ -9,9 +9,9 @@ end
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "chrisgrieser/nvim-recorder" },
+  event = "VeryLazy",
   opts = {
     options = {
-      icons_enabled = true,
       component_separators = { left = ' ', right = ' ' },
       section_separators = { left = ' ', right = ' ' },
       disabled_filetypes = {
@@ -30,7 +30,11 @@ return {
     sections = {
       lualine_a = { 'mode' },
       lualine_b = { 'branch', 'diff', 'diagnostics' },
-      lualine_c = { '%=', "harpoon2" },
+      lualine_c = { '%=', {
+        "harpoon2",
+        indicators = { "a", "s", "q", "w" },
+        active_indicators = { "A", "S", "Q", "W" },
+      } },
       lualine_x = { 'filename' },
       lualine_y = {
         recorder_status,
