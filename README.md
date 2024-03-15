@@ -3,6 +3,13 @@ My neovim configuration. ⚡ Power full and 🔸 minimalist.
 
 Powered lspconfig, mason, treesitter, nvim-cmp, github copilot and more.
 
+<a href="https://dotfyle.com/plugins/letieu/hacker.nvim">
+	<img src="https://dotfyle.com/plugins/letieu/hacker.nvim/shield?style=flat" />
+</a> 
+<a href="https://dotfyle.com/plugins/letieu/harpoon-lualine">
+	<img src="https://dotfyle.com/plugins/letieu/harpoon-lualine/shield?style=flat" />
+</a>
+
 ## Preview
 <img src="https://github.com/letieu/images/blob/master/github-preview/nvim-github-light.png?raw=true" />
 
