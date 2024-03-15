@@ -17,9 +17,11 @@ return {
   { "dmmulroy/tsc.nvim",                   config = true },
   {
     "letieu/harpoon-lualine",
-    dependencies = { "nvim-lualine/lualine.nvim", {
-      "ThePrimeagen/harpoon",
-      branch = "harpoon2",
-    } },
+    dependencies = {
+      {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+      }
+    },
   }
 }
