@@ -15,5 +15,12 @@ return {
   { 'mrjones2014/smart-splits.nvim',       config = true },
   { "yioneko/nvim-vtsls" },
   { 'akinsho/git-conflict.nvim',           config = true, version = "*" },
-  { "dmmulroy/tsc.nvim",                   config = true }
+  { "dmmulroy/tsc.nvim",                   config = true },
+  {
+    "letieu/harpoon-lualine",
+    dependencies = { "nvim-lualine/lualine.nvim", {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+    } },
+  }
 }

@@ -33,25 +33,6 @@ return {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
       }),
-      window = {
-        documentation = cmp.config.window.bordered(),
-        completion = {
-          winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-          col_offset = -3,
-          side_padding = 0,
-        },
-      },
-      formatting = {
-        fields = { "kind", "abbr", "menu" },
-        format = lspkind.cmp_format({
-          mode = 'symbol',
-          maxwidth = 50,
-
-          before = function(entry, vim_item)
-            return vim_item
-          end
-        })
-      },
       matching = {
         disallow_fuzzy_matching = true,
         disallow_fullfuzzy_matching = true,
