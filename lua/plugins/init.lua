@@ -7,7 +7,6 @@ return {
   { "chentoast/marks.nvim",                config = true },
   { "folke/todo-comments.nvim",            config = true },
   { "j-hui/fidget.nvim",                   config = true },
-  { "onsails/lspkind.nvim" },
   { "kevinhwang91/nvim-hlslens",           config = true },
   { "stevearc/dressing.nvim",              config = true },
   { "karb94/neoscroll.nvim",               config = true },
