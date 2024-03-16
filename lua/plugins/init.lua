@@ -2,7 +2,6 @@ return {
   { "neovim/nvim-lspconfig" },
   { "lukas-reineke/indent-blankline.nvim", config = true, main = "ibl", },
   { "windwp/nvim-autopairs",               config = true },
-  { "numToStr/Comment.nvim",               config = true },
   { "lewis6991/gitsigns.nvim",             config = true },
   { "chentoast/marks.nvim",                config = true },
   { "folke/todo-comments.nvim",            config = true },
@@ -15,6 +14,21 @@ return {
   { "yioneko/nvim-vtsls" },
   { 'akinsho/git-conflict.nvim',           config = true, version = "*" },
   { "dmmulroy/tsc.nvim",                   config = true },
+  {
+    "numToStr/Comment.nvim",
+    dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
+    config = function()
+      require('Comment').setup {
+        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+      }
+    end,
+  },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    opts = { enable_autocmd = false }
+  },
   {
     "letieu/harpoon-lualine",
     dependencies = {

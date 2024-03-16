@@ -34,6 +34,7 @@ return {
         "harpoon2",
         indicators = { "a", "s", "q", "w" },
         active_indicators = { "A", "S", "Q", "W" },
+        separator = ".",
       } },
       lualine_x = { 'filename' },
       lualine_y = {
