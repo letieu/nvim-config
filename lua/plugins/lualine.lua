@@ -40,8 +40,10 @@ return {
         lualine_x = { 'filename' },
         lualine_y = {
           recorder_status,
+          'progress'
         },
         lualine_z = {
+          'location',
           recorder_slots,
         }
       },
