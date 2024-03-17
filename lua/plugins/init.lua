@@ -6,7 +6,6 @@ return {
   { "j-hui/fidget.nvim",             config = true },
   { "kevinhwang91/nvim-hlslens",     config = true },
   { "stevearc/dressing.nvim",        config = true },
-  { "karb94/neoscroll.nvim",         config = true },
   { "wintermute-cell/gitignore.nvim" },
   { "yioneko/nvim-vtsls" },
   { 'echasnovski/mini.indentscope',  config = 'true' },
