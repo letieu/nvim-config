@@ -10,10 +10,15 @@ return {
   { "stevearc/dressing.nvim",              config = true },
   { "karb94/neoscroll.nvim",               config = true },
   { "wintermute-cell/gitignore.nvim" },
-  { 'mrjones2014/smart-splits.nvim',       config = true },
   { "yioneko/nvim-vtsls" },
   { 'akinsho/git-conflict.nvim',           config = true, version = "*" },
   { "dmmulroy/tsc.nvim",                   config = true },
+  {
+    'mrjones2014/smart-splits.nvim',
+    opts = {
+      disable_multiplexer_nav_when_zoomed = false,
+    }
+  },
   {
     "numToStr/Comment.nvim",
     dependencies = {
