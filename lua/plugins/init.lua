@@ -4,7 +4,6 @@ return {
   { "windwp/nvim-autopairs",               config = true },
   { "lewis6991/gitsigns.nvim",             config = true },
   { "chentoast/marks.nvim",                config = true },
-  { "folke/todo-comments.nvim",            config = true },
   { "j-hui/fidget.nvim",                   config = true },
   { "kevinhwang91/nvim-hlslens",           config = true },
   { "stevearc/dressing.nvim",              config = true },
@@ -13,6 +12,7 @@ return {
   { "yioneko/nvim-vtsls" },
   { 'akinsho/git-conflict.nvim',           config = true, version = "*" },
   { "dmmulroy/tsc.nvim",                   config = true },
+  { "folke/todo-comments.nvim",            config = true, event = 'VimEnter' },
   {
     'mrjones2014/smart-splits.nvim',
     opts = {
