@@ -60,3 +60,5 @@ map('n', '<leader>do', ':DiffviewOpen<CR>', { noremap = true, silent = true })
 map('n', '<leader>dl', ':DiffviewFileHistory %<CR>', { noremap = true, silent = true })
 map('n', '<leader>dL', ':DiffviewFileHistory<CR>', { noremap = true, silent = true })
 map('n', '<leader>dc', ':DiffviewClose<CR>', { noremap = true, silent = true })
+
+map('n', '<leader>fm', ":Format<CR>", { noremap = true, silent = true })

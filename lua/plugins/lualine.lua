@@ -26,12 +26,13 @@ return {
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { '%=', {
-          "harpoon2",
-          indicators = { "a", "s", "q", "w" },
-          active_indicators = { "A", "S", "Q", "W" },
-          separator = ".",
-        } },
+        lualine_c = {
+          '%=',
+          {
+            icon = "󰀱 ",
+            "grapple"
+          }
+        },
         lualine_x = { 'filename' },
         lualine_y = {
           recorder_status,

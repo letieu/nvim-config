@@ -1,5 +1,3 @@
-local on_lsp_attach = require("lsp.utils").on_attach
-
 -- blink yanked text
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('yank_highlight', {}),
@@ -22,6 +20,7 @@ vim.api.nvim_create_autocmd('FocusLost', {
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(args)
+    local on_lsp_attach = require("lsp.utils").on_attach
     on_lsp_attach(args.data.client_id, args.buf)
   end,
 })
