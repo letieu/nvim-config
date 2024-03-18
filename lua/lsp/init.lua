@@ -12,6 +12,7 @@ local servers = {
   "dockerls",
   "gopls",
   "vtsls",
+  "intelephense",
   {
     "rust_analyzer",
     config = {

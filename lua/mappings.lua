@@ -1,5 +1,5 @@
 local map = vim.keymap.set
-local builtin = require "telescope.builtin"
+local telescope_builtin = require "telescope.builtin"
 local nore_and_silent = { noremap = true, silent = true }
 
 -- ==================== General ====================
@@ -32,12 +32,12 @@ map("n", "[d", vim.diagnostic.goto_prev, nore_and_silent)
 map("n", "]d", vim.diagnostic.goto_next, nore_and_silent)
 
 -- ==================== Telescope ====================
-map("n", "<leader>ff", builtin.find_files, {})
+map("n", "<leader>ff", telescope_builtin.find_files, {})
 map("n", "<leader>fa", function()
-  builtin.find_files { hidden = true, follow = true, no_ignore = true }
+  telescope_builtin.find_files { hidden = true, follow = true, no_ignore = true }
 end, {})
-map("n", "<leader>fw", builtin.live_grep, {})
-map("n", "<leader>fd", builtin.diagnostics, {})
+map("n", "<leader>fw", telescope_builtin.live_grep, {})
+map("n", "<leader>fd", telescope_builtin.diagnostics, {})
 map("n", "<leader>ft", ":TodoTelescope keywords=TODO,FIX,FIXME,HACK <CR>", {})
 map("n", "<leader>gs", "<cmd>Telescope git_status theme=ivy<cr>", {})
 
