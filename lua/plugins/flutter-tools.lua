@@ -1,8 +1,8 @@
 return {
-  'akinsho/flutter-tools.nvim',
+  "akinsho/flutter-tools.nvim",
   lazy = false,
   dependencies = {
-    'nvim-lua/plenary.nvim',
+    "nvim-lua/plenary.nvim",
   },
   config = function()
     local on_attach = require("lsp.utils").on_attach
@@ -23,7 +23,7 @@ return {
       lsp = {
         on_attach = on_attach,
         capabilities = capabilities,
-      }
+      },
     }
-  end
+  end,
 }

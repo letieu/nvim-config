@@ -1,13 +1,13 @@
 return {
   "kevinhwang91/nvim-ufo",
   dependencies = {
-    "kevinhwang91/promise-async"
+    "kevinhwang91/promise-async",
   },
   config = function()
     -- Helper
     local handler = function(virtText, lnum, endLnum, width, truncate)
       local newVirtText = {}
-      local suffix = ('  %d '):format(endLnum - lnum)
+      local suffix = ("  %d "):format(endLnum - lnum)
       local sufWidth = vim.fn.strdisplaywidth(suffix)
       local targetWidth = width - sufWidth
       local curWidth = 0
@@ -23,22 +23,22 @@ return {
           chunkWidth = vim.fn.strdisplaywidth(chunkText)
           -- str width returned from truncate() may less than 2nd argument, need padding
           if curWidth + chunkWidth < targetWidth then
-            suffix = suffix .. (' '):rep(targetWidth - curWidth - chunkWidth)
+            suffix = suffix .. (" "):rep(targetWidth - curWidth - chunkWidth)
           end
           break
         end
         curWidth = curWidth + chunkWidth
       end
-      table.insert(newVirtText, { suffix, 'MoreMsg' })
+      table.insert(newVirtText, { suffix, "MoreMsg" })
       return newVirtText
     end
 
     -- Setup
-    require('ufo').setup({
+    require("ufo").setup {
       provider_selector = function(bufnr, filetype, buftype)
-        return { 'treesitter', 'indent' }
+        return { "treesitter", "indent" }
       end,
-      fold_virt_text_handler = handler
-    })
+      fold_virt_text_handler = handler,
+    }
   end,
 }

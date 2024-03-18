@@ -1,27 +1,27 @@
 local M = {}
 local map = vim.keymap.set
-local navbuddy = require("nvim-navbuddy")
+local navbuddy = require "nvim-navbuddy"
 
 local mapping = function(buf)
   local bufopts = { noremap = true, silent = true, buffer = buf }
 
-  map('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  map('n', 'gd', vim.lsp.buf.definition, bufopts)
-  map('n', 'K', vim.lsp.buf.hover, bufopts)
-  map('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  map('n', '<leader>ra', vim.lsp.buf.rename, bufopts)
-  map('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
+  map("n", "gD", vim.lsp.buf.declaration, bufopts)
+  map("n", "gd", vim.lsp.buf.definition, bufopts)
+  map("n", "K", vim.lsp.buf.hover, bufopts)
+  map("n", "gi", vim.lsp.buf.implementation, bufopts)
+  map("n", "<leader>ra", vim.lsp.buf.rename, bufopts)
+  map("n", "<leader>D", vim.lsp.buf.type_definition, bufopts)
 
-  map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, bufopts)
+  map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, bufopts)
 
-  map('n', '<leader>cl', vim.lsp.codelens.run, bufopts)
-  map('n', 'gr', vim.lsp.buf.references, bufopts)
+  map("n", "<leader>cl", vim.lsp.codelens.run, bufopts)
+  map("n", "gr", vim.lsp.buf.references, bufopts)
 
-  map('n', '<leader>f', vim.diagnostic.open_float, bufopts)
-  map('n', '[d', vim.diagnostic.goto_prev, bufopts)
-  map('n', ']d', vim.diagnostic.goto_next, bufopts)
+  map("n", "<leader>f", vim.diagnostic.open_float, bufopts)
+  map("n", "[d", vim.diagnostic.goto_prev, bufopts)
+  map("n", "]d", vim.diagnostic.goto_next, bufopts)
 
-  map('n', '<leader>n', navbuddy.open, bufopts)
+  map("n", "<leader>n", navbuddy.open, bufopts)
 end
 
 M.on_attach = function(client_id, buf)

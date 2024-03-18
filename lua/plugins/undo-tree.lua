@@ -25,6 +25,6 @@ return {
   },
   config = function(_, opts)
     require("telescope").setup(opts)
-    require("telescope").load_extension("undo")
+    require("telescope").load_extension "undo"
   end,
 }

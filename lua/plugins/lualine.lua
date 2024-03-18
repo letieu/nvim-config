@@ -11,7 +11,7 @@ return {
   dependencies = { "chrisgrieser/nvim-recorder" },
   event = "VimEnter",
   config = function()
-    require("lualine").setup({
+    require("lualine").setup {
       options = {
         component_separators = "",
         section_separators = "",
@@ -24,37 +24,37 @@ return {
         globalstatus = true,
       },
       sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_a = { "mode" },
+        lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = {
-          '%=',
+          "%=",
           {
             icon = "󰀱 ",
-            "grapple"
-          }
+            "grapple",
+          },
         },
-        lualine_x = { 'filename' },
+        lualine_x = { "filename" },
         lualine_y = {
           recorder_status,
-          'progress'
+          "progress",
         },
         lualine_z = {
-          'location',
+          "location",
           recorder_slots,
-        }
+        },
       },
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { 'filename' },
-        lualine_x = { 'location' },
+        lualine_c = { "filename" },
+        lualine_x = { "location" },
         lualine_y = {},
-        lualine_z = {}
+        lualine_z = {},
       },
       tabline = {},
       winbar = {},
       inactive_winbar = {},
       extensions = {},
-    })
-  end
+    }
+  end,
 }

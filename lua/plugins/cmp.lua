@@ -5,32 +5,32 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
-    "saadparwaiz1/cmp_luasnip"
+    "saadparwaiz1/cmp_luasnip",
   },
   config = function()
-    local cmp = require("cmp")
+    local cmp = require "cmp"
 
     -- lsp
-    cmp.setup({
+    cmp.setup {
       snippet = {
         expand = function(args)
-          require('luasnip').lsp_expand(args.body)
+          require("luasnip").lsp_expand(args.body)
         end,
       },
       -- Mapping
-      mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-        ['<C-j>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-        ['<C-k>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-      }),
-      sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-      }),
+      mapping = cmp.mapping.preset.insert {
+        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<C-e>"] = cmp.mapping.abort(),
+        ["<CR>"] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace, select = true },
+        ["<C-j>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
+        ["<C-k>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+      },
+      sources = cmp.config.sources {
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+      },
       matching = {
         disallow_fuzzy_matching = true,
         disallow_fullfuzzy_matching = true,
@@ -41,21 +41,21 @@ return {
       experimental = {
         ghost_text = false,
       },
-    })
+    }
 
     -- `/` cmdline setup.
-    cmp.setup.cmdline('/', {
+    cmp.setup.cmdline("/", {
       mapping = cmp.mapping.preset.cmdline(),
     })
 
     -- `:` cmdline setup.
-    cmp.setup.cmdline(':', {
+    cmp.setup.cmdline(":", {
       mapping = cmp.mapping.preset.cmdline(),
       sources = cmp.config.sources({
-        { name = 'path' }
+        { name = "path" },
       }, {
-        { name = 'cmdline' }
-      })
+        { name = "cmdline" },
+      }),
     })
-  end
+  end,
 }

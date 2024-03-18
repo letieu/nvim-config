@@ -137,22 +137,22 @@ return {
       return vim.regex(regex_str):match_str(name) ~= nil
     end
 
-    local api = require("nvim-tree.api")
+    local api = require "nvim-tree.api"
     api.events.subscribe(api.events.Event.NodeRenamed, function(data)
       local stat = vim.loop.fs_stat(data.new_name)
       if not stat then
         return
       end
       local type = ({ file = "file", directory = "folder" })[stat.type]
-      local clients = vim.lsp.get_active_clients({})
+      local clients = vim.lsp.get_active_clients {}
       for _, client in ipairs(clients) do
         if check_folders_contains(client.workspace_folders, data.old_name) then
           local filters = vim.tbl_get(client.server_capabilities, "workspace", "fileOperations", "didRename", "filters")
-              or {}
+            or {}
           for _, filter in pairs(filters) do
             if
-                match_file_operation_filter(filter, data.old_name, type)
-                and match_file_operation_filter(filter, data.new_name, type)
+              match_file_operation_filter(filter, data.old_name, type)
+              and match_file_operation_filter(filter, data.new_name, type)
             then
               client.notify(
                 "workspace/didRenameFiles",
