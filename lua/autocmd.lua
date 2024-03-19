@@ -24,3 +24,18 @@ vim.api.nvim_create_autocmd("LspAttach", {
     on_lsp_attach(args.data.client_id, args.buf)
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = vim.api.nvim_create_augroup("wrap_spell", { clear = true }),
+  pattern = { "gitcommit", "markdown" },
+  callback = function()
+    vim.opt_local.textwidth = 80
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
+    vim.opt_local.tabstop = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.expandtab = true
+    vim.opt_local.conceallevel = 2
+  end,
+})
