@@ -1,5 +1,6 @@
 return {
   { "neovim/nvim-lspconfig" },
+  { "folke/neodev.nvim", opts = {} },
   { "windwp/nvim-autopairs", config = true },
   { "lewis6991/gitsigns.nvim", config = true },
   { "chentoast/marks.nvim", config = true },
