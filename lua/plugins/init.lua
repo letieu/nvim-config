@@ -9,7 +9,6 @@ return {
   { "stevearc/dressing.nvim", config = true },
   { "wintermute-cell/gitignore.nvim" },
   { "yioneko/nvim-vtsls" },
-  { "echasnovski/mini.indentscope", config = "true" },
   { "akinsho/git-conflict.nvim", config = true, version = "*" },
   { "dmmulroy/tsc.nvim", config = true },
   { "folke/todo-comments.nvim", config = true, event = "VimEnter" },
