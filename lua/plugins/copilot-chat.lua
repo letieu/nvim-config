@@ -19,10 +19,7 @@ return {
         name = "", -- Name to use in chat
         separator = "-------------------------", -- Separator to use in chat
         history_path = vim.fn.stdpath "data" .. "/copilotchat_history", -- Default path to stored history
-        callback = function(response, x)
-          print("Callback response: ", response)
-          print("Callback x: ", x)
-        end,
+        callback = nil,
         -- default prompts
         prompts = {
           Explain = {
