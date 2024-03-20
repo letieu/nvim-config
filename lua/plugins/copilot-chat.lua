@@ -92,6 +92,19 @@ return {
         end,
         desc = "CopilotChat - Open",
       },
+      {
+        "<leader>cm",
+        function()
+          vim.cmd "CopilotChatCommitStaged"
+        end,
+        desc = "CopilotChat - Commit",
+      },
+    },
+
+    cmd = {
+      "CopilotChatOpen",
+      "CopilotChatCommit",
+      "CopilotChatCommitStaged",
     },
   },
 }
