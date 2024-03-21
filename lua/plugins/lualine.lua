@@ -1,9 +1,9 @@
-local function recorder_status()
-  return require("recorder").recordingStatus()
-end
-
-local function recorder_slots()
-  return require("recorder").displaySlots()
+function recordStatus()
+  local reg = vim.fn.reg_recording()
+  if reg == "" then
+    return ""
+  end -- not recording
+  return "󰑋 " .. reg
 end
 
 return {
@@ -35,12 +35,11 @@ return {
         },
         lualine_x = { "filename" },
         lualine_y = {
-          recorder_status,
           "progress",
         },
         lualine_z = {
           "location",
-          recorder_slots,
+          recordStatus,
         },
       },
       inactive_sections = {
