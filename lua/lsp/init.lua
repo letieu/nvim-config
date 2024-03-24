@@ -13,6 +13,7 @@ local servers = {
   "gopls",
   "vtsls",
   "intelephense",
+  "ansiblels",
   {
     "rust_analyzer",
     config = {

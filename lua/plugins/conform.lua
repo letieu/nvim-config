@@ -8,6 +8,7 @@ return {
         typescript = { { "prettier", "eslint" } },
         python = { "isort", "black" },
         json = { "jq" },
+        yaml = { "yq" },
       },
     }
   end,
