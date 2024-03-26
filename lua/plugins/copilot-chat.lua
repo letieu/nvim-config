@@ -8,12 +8,11 @@ return {
     },
     opts = {
       debug = false,
-      show_folds = true, -- Shows folds for sections in chat
       show_help = false, -- Shows help message as virtual lines when waiting for user input
-      clear_chat_on_new_prompt = false, -- Clears chat on every new prompt
-      auto_follow_cursor = true, -- Auto-follow cursor in chat
-      name = "", -- Name to use in chat
-      separator = "-------------------------", -- Separator to use in chat
+      question_header = "**** ", -- Header to use for user questions
+      answer_header = "**** ", -- Header to use for AI answers
+      error_header = "**Error** ", -- Header to use for errors
+      separator = "---", -- Separator to use in chat
       callback = nil,
     },
     keys = {

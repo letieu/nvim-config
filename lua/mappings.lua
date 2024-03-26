@@ -62,3 +62,6 @@ map("n", "<leader>dL", ":DiffviewFileHistory<CR>", { noremap = true, silent = tr
 map("n", "<leader>dc", ":DiffviewClose<CR>", { noremap = true, silent = true })
 
 map("n", "<leader>fm", ":Format<CR>", { noremap = true, silent = true })
+map("n", "<leader>fj", function()
+  require("jot").open()
+end, { noremap = true, silent = true })

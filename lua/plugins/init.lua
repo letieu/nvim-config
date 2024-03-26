@@ -12,6 +12,7 @@ return {
   { "akinsho/git-conflict.nvim", config = true, version = "*" },
   { "dmmulroy/tsc.nvim", config = true },
   { "folke/todo-comments.nvim", config = true, event = "VimEnter" },
+  { "letieu/jot.lua" },
   {
     "mrjones2014/smart-splits.nvim",
     opts = {
