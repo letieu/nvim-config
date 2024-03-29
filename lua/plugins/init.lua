@@ -13,6 +13,7 @@ return {
   { "dmmulroy/tsc.nvim", config = true },
   { "folke/todo-comments.nvim", config = true, event = "VimEnter" },
   { "letieu/jot.lua" },
+  { "letieu/hacker.nvim" },
   { "kevinhwang91/nvim-bqf" },
   {
     "mrjones2014/smart-splits.nvim",

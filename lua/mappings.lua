@@ -51,8 +51,6 @@ map("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", { noremap = true, silent = tr
 map("n", "<leader>gb", ":Gitsigns blame_line<CR>", { noremap = true, silent = true })
 
 -- ==================== Another Plugins ====================
-map("n", "<C-n>", ":NvimTreeToggle<CR>", { silent = true })
-
 map("n", "zR", require("ufo").openAllFolds)
 map("n", "zM", require("ufo").closeAllFolds)
 
