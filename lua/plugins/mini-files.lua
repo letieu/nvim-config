@@ -1,9 +1,10 @@
 return {
   "echasnovski/mini.files",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   version = false,
   config = true,
   keys = {
-    { -- lazy style key map
+    {
       "<leader>fe",
       function()
         MiniFiles.open()
