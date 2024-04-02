@@ -14,6 +14,7 @@ local servers = {
   "vtsls",
   "intelephense",
   "ansiblels",
+  "dartls",
   {
     "rust_analyzer",
     config = {
