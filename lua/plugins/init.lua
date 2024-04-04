@@ -38,5 +38,12 @@ return {
   {
     "rafcamlet/nvim-luapad",
   },
-  { "mistricky/codesnap.nvim", build = "make" },
+  {
+    "ellisonleao/carbon-now.nvim",
+    lazy = true,
+    cmd = "CarbonNow",
+    opts = {
+      open_cmd = "open",
+    },
+  },
 }
