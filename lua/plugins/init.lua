@@ -38,4 +38,5 @@ return {
   {
     "rafcamlet/nvim-luapad",
   },
+  { "mistricky/codesnap.nvim", build = "make" },
 }
