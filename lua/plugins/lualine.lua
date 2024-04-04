@@ -32,8 +32,8 @@ return {
             icon = "󰀱 ",
             "grapple",
           },
+          "filename"
         },
-        lualine_x = { "filename" },
         lualine_y = {
           "progress",
         },
