@@ -1,5 +1,6 @@
 return {
   { "neovim/nvim-lspconfig" },
+  { "rafcamlet/nvim-luapad" },
   { "folke/neodev.nvim", opts = {} },
   { "windwp/nvim-autopairs", config = true },
   { "lewis6991/gitsigns.nvim", config = true },
@@ -12,7 +13,6 @@ return {
   { "akinsho/git-conflict.nvim", config = true, version = "*" },
   { "dmmulroy/tsc.nvim", config = true },
   { "folke/todo-comments.nvim", config = true, event = "VimEnter" },
-  { "letieu/jot.lua" },
   { "kevinhwang91/nvim-bqf" },
   {
     "mrjones2014/smart-splits.nvim",
@@ -36,14 +36,23 @@ return {
     opts = { enable_autocmd = false },
   },
   {
-    "rafcamlet/nvim-luapad",
-  },
-  {
     "ellisonleao/carbon-now.nvim",
     lazy = true,
     cmd = "CarbonNow",
     opts = {
       open_cmd = "open",
+    },
+  },
+  {
+    "letieu/jot.lua",
+    keys = {
+      {
+        "<leader>fj",
+        function()
+          require("jot").toggle()
+        end,
+        desc = "Jot - Toggle",
+      },
     },
   },
 }
