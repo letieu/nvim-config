@@ -29,7 +29,7 @@ return {
         lualine_c = {
           "%=",
           {
-            icon = "󰀱 ",
+            icon = "⚓",
             "grapple",
           },
           "filename"
