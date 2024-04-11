@@ -3,7 +3,6 @@ return {
   { "rafcamlet/nvim-luapad" },
   { "folke/neodev.nvim", opts = {} },
   { "windwp/nvim-autopairs", config = true },
-  { "lewis6991/gitsigns.nvim", config = true },
   { "chentoast/marks.nvim", config = true },
   { "j-hui/fidget.nvim", config = true },
   { "kevinhwang91/nvim-hlslens", config = true },
@@ -14,12 +13,6 @@ return {
   { "dmmulroy/tsc.nvim", config = true },
   { "folke/todo-comments.nvim", config = true, event = "VimEnter" },
   { "kevinhwang91/nvim-bqf" },
-  {
-    "mrjones2014/smart-splits.nvim",
-    opts = {
-      disable_multiplexer_nav_when_zoomed = false,
-    },
-  },
   {
     "numToStr/Comment.nvim",
     dependencies = {

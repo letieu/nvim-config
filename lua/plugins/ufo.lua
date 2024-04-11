@@ -41,4 +41,20 @@ return {
       fold_virt_text_handler = handler,
     }
   end,
+  keys = {
+    {
+      "zR",
+      function()
+        require("ufo").openAllFolds()
+      end,
+      desc = "UFO open all folds",
+    },
+    {
+      "zM",
+      function()
+        require("ufo").closeAllFolds()
+      end,
+      desc = "UFO close all folds",
+    },
+  },
 }

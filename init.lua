@@ -16,6 +16,5 @@ require("lazy").setup "plugins"
 
 require "lsp"
 require "autocmd"
-require "cmd"
 require "mappings"
 require "diagnostic"
