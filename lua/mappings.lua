@@ -54,7 +54,7 @@ map("n", "<leader>gb", ":Gitsigns blame_line<CR>", { noremap = true, silent = tr
 map("n", "zR", require("ufo").openAllFolds)
 map("n", "zM", require("ufo").closeAllFolds)
 
-map("n", "<leader>do", ":DiffviewOpen<CR>", { noremap = true, silent = true })
+map("n", "<leader>go", ":DiffviewOpen<CR>", { noremap = true, silent = true })
 map("n", "<leader>dl", ":DiffviewFileHistory %<CR>", { noremap = true, silent = true })
 map("n", "<leader>dL", ":DiffviewFileHistory<CR>", { noremap = true, silent = true })
 map("n", "<leader>dc", ":DiffviewClose<CR>", { noremap = true, silent = true })
