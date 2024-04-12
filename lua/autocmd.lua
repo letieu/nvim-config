@@ -24,3 +24,10 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
     require("fidget").notify "Stopped recording"
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "dart",
+  callback = function()
+    vim.bo.commentstring = "// %s"
+  end,
+})
