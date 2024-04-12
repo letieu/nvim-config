@@ -1,5 +1,6 @@
 return {
   "tzachar/highlight-undo.nvim",
+  event = "BufRead",
   config = function()
     require("highlight-undo").setup {
       hlgroup = "HighlightUndo",

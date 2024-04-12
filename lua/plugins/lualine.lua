@@ -1,14 +1,5 @@
-local function recordStatus()
-  local reg = vim.fn.reg_recording()
-  if reg == "" then
-    return ""
-  end -- not recording
-  return "󰑋 " .. reg
-end
-
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { "chrisgrieser/nvim-recorder" },
   event = "VimEnter",
   config = function()
     require("lualine").setup {
@@ -32,14 +23,13 @@ return {
             icon = "⚓",
             "grapple",
           },
-          "filename"
+          "filename",
         },
         lualine_y = {
           "progress",
         },
         lualine_z = {
           "location",
-          recordStatus,
         },
       },
       inactive_sections = {

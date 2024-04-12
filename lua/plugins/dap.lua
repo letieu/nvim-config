@@ -40,6 +40,8 @@ return {
   end,
   keys = {
     { "<leader>bt", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", desc = "Debug toggle break point" },
+    { "<leader>bl", "<cmd>lua require'dap'.list_breakpoints()<cr>", desc = "Debug list break points" },
+    { "<leader>bc", "<cmd>lua require'dap'.clear_breakpoints()<cr>", desc = "Debug clear all break points" },
     --
     { "<F5>", "<cmd>lua require'dap'.continue()<cr>", desc = "Debug continue" },
     { "<F7>", "<cmd>lua require'dap'.step_into()<cr>", desc = "Debug step into" },
@@ -48,13 +50,13 @@ return {
 
     --
     {
-      "<leader>bus",
+      "<leader>bs",
       function()
         local widgets = require "dap.ui.widgets"
         local my_sidebar = widgets.sidebar(widgets.scopes)
         my_sidebar.open()
       end,
-      desc = "Debug step over",
+      desc = "Debug show scopes",
     },
   },
 }

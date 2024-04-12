@@ -1,6 +1,5 @@
 local M = {}
 local map = vim.keymap.set
-local navbuddy = require "nvim-navbuddy"
 
 local mapping = function(buf)
   local bufopts = { noremap = true, silent = true, buffer = buf }
@@ -20,8 +19,6 @@ local mapping = function(buf)
   map("n", "<leader>f", vim.diagnostic.open_float, bufopts)
   map("n", "[d", vim.diagnostic.goto_prev, bufopts)
   map("n", "]d", vim.diagnostic.goto_next, bufopts)
-
-  map("n", "<leader>n", navbuddy.open, bufopts)
 end
 
 M.on_attach = function(client_id, buf)

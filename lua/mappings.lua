@@ -10,5 +10,5 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, nore_and_silent)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, nore_and_silent)
 
 -- ==================== Quickfix ====================
-vim.keymap.set("n", "[q", ":cprev<CR>", nore_and_silent) -- previous quickfix
-vim.keymap.set("n", "]q", ":cnext<CR>", nore_and_silent) -- next quickfix
+vim.keymap.set("n", "[q", ":cprev<CR>", nore_and_silent)
+vim.keymap.set("n", "]q", ":cnext<CR>", nore_and_silent)

@@ -5,18 +5,11 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
-    "saadparwaiz1/cmp_luasnip",
   },
   config = function()
     local cmp = require "cmp"
 
-    -- lsp
     cmp.setup {
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
-      },
       -- Mapping
       mapping = cmp.mapping.preset.insert {
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -29,7 +22,6 @@ return {
       },
       sources = cmp.config.sources {
         { name = "nvim_lsp" },
-        { name = "luasnip" },
       },
       matching = {
         disallow_fuzzy_matching = true,

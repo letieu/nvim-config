@@ -1,8 +1,6 @@
 local lspconfig = require "lspconfig"
 local capabilities = require("lsp.utils").capabilities
 
-require("lspconfig.configs").vtsls = require("vtsls").lspconfig
-
 local servers = {
   "html",
   "cssls",
@@ -11,7 +9,7 @@ local servers = {
   "solidity",
   "dockerls",
   "gopls",
-  "vtsls",
+  "tsserver",
   "intelephense",
   "ansiblels",
   "dartls",

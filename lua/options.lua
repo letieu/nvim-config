@@ -1,58 +1,55 @@
-local opt = vim.opt
-local g = vim.g
+vim.opt.showmode = false
+vim.opt.cmdheight = 0
+vim.opt.laststatus = 3 -- global statusline
 
-opt.showmode = false
-opt.cmdheight = 0
-opt.laststatus = 3 -- global statusline
+vim.opt.foldlevel = 20 -- Using ufo provider need a large value, feel free to decrease the value
+vim.opt.foldenable = true
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
-vim.o.foldcolumn = "0" -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+vim.opt.title = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.cursorline = true
 
-opt.title = true
-opt.clipboard = "unnamedplus"
-opt.cursorline = true
-
-opt.spell = true
-opt.spelllang = "en_us"
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
 
 -- Indenting
-opt.expandtab = true
-opt.shiftwidth = 2
-opt.smartindent = true
-opt.tabstop = 2
-opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 
-opt.fillchars = { eob = " " }
-opt.ignorecase = true
-opt.smartcase = true
-opt.mouse = "a"
-opt.swapfile = false
+vim.opt.fillchars = { eob = " " }
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.mouse = "a"
+vim.opt.swapfile = false
 
 -- Numbers
-opt.number = true
-opt.ruler = false
-opt.relativenumber = true
+vim.opt.number = true
+vim.opt.ruler = false
+vim.opt.relativenumber = true
 
-opt.signcolumn = "yes"
-opt.splitbelow = true
-opt.splitright = true
-opt.termguicolors = true
-opt.timeoutlen = 400
-opt.undofile = true
+vim.opt.signcolumn = "yes"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.termguicolors = true
+vim.opt.timeoutlen = 400
+vim.opt.undofile = true
 
 -- interval for writing swap file to disk, also used by gitsigns
-opt.updatetime = 250
+vim.opt.updatetime = 250
 
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
-opt.whichwrap:append "<>[]hl"
+vim.opt.whichwrap:append "<>[]hl"
 
-g.mapleader = " "
+vim.g.mapleader = " "
 
 -- disable some builtin vim plugins
-local default_plugins = {
+local default_disable_plugins = {
   "2html_plugin",
   "getscript",
   "getscriptPlugin",
@@ -81,17 +78,17 @@ local default_plugins = {
   "ftplugin",
 }
 
-for _, plugin in pairs(default_plugins) do
-  g["loaded_" .. plugin] = 1
+for _, plugin in pairs(default_disable_plugins) do
+  vim.g["loaded_" .. plugin] = 1
 end
 
-local default_providers = {
+local default_disable_providers = {
   "node",
   "perl",
   "python3",
   "ruby",
 }
 
-for _, provider in ipairs(default_providers) do
+for _, provider in ipairs(default_disable_providers) do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
