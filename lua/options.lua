@@ -2,7 +2,7 @@ vim.opt.showmode = false
 vim.opt.cmdheight = 0
 vim.opt.laststatus = 3 -- global statusline
 
-vim.opt.foldlevel = 20 -- Using ufo provider need a large value, feel free to decrease the value
+vim.opt.foldlevel = 20
 vim.opt.foldenable = true
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
