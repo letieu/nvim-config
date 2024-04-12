@@ -3,7 +3,7 @@
 My neovim configuration.
 
 - Blazing fast (40ms to start up)
-- Minimalistic (38 plugins)
+- Minimalistic (26 plugins)
 - Lazy load everything
 
 ## Lazy profile
