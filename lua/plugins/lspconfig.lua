@@ -10,18 +10,7 @@ local servers = {
   "intelephense",
   "ansiblels",
   "dartls",
-  {
-    "rust_analyzer",
-    config = {
-      settings = {
-        ["rust-analyzer"] = {
-          checkOnSave = {
-            command = "clippy",
-          },
-        },
-      },
-    },
-  },
+  { "rust_analyzer", config = { settings = { ["rust-analyzer"] = { checkOnSave = { command = "clippy" } } } } },
 }
 
 return {
@@ -29,7 +18,7 @@ return {
   event = { "BufRead" },
   config = function()
     local lspconfig = require "lspconfig"
-    local capabilities = require("lsp.utils").capabilities
+    local capabilities = require("helper.lsp").capabilities
 
     for _, lsp in ipairs(servers) do
       local config = { capabilities = capabilities }
@@ -47,7 +36,7 @@ return {
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(args)
-        local on_lsp_attach = require("lsp.utils").on_attach
+        local on_lsp_attach = require("helper.lsp").on_attach
         on_lsp_attach(args.data.client_id, args.buf)
       end,
     })
