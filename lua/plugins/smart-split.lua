@@ -1,6 +1,7 @@
 return {
   "mrjones2014/smart-splits.nvim",
   event = "VimEnter",
+  enabled = false,
   opts = {
     disable_multiplexer_nav_when_zoomed = false,
   },
