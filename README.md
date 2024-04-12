@@ -2,20 +2,22 @@
 
 My neovim configuration.
 
-- Blazing fast (45ms to start up)
-- Minimalistic (39 plugins)
+- Blazing fast (40ms to start up)
+- Minimalistic (38 plugins)
 - Lazy load everything
 
 ## Lazy profile
 
 ```bash
-  Startuptime: 47.18ms
+
+  Startuptime: 41.26ms
 
   Based on the actual CPU time of the Neovim process till UIEnter.
   This is more accurate than `nvim --startuptime`.
-    LazyStart 27.29ms
-    LazyDone  39.34ms (+12.05ms)
-    UIEnter   47.18ms (+7.84ms)
+    LazyStart 24.99ms
+    LazyDone  34.22ms (+9.23ms)
+    UIEnter   41.26ms (+7.04ms)
+
 ```
 
 ## Preview
