@@ -3,7 +3,6 @@ return {
   { "folke/neodev.nvim", opts = {}, ft = { "lua" } },
   { "windwp/nvim-autopairs", config = true, event = { "InsertEnter" } },
   { "j-hui/fidget.nvim", config = true, event = { "BufRead" } },
-  { "stevearc/dressing.nvim", config = true, event = { "LspAttach" } },
   { "wintermute-cell/gitignore.nvim", cmd = { "Gitignore" } },
   { "akinsho/git-conflict.nvim", config = true, version = "*", event = { "BufRead" } },
   { "dmmulroy/tsc.nvim", config = true, cmd = { "TSC" } },
