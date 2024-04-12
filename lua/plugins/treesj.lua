@@ -5,9 +5,14 @@ return {
     require("treesj").setup {
       use_default_keymaps = false,
     }
-
-    vim.keymap.set("n", "<leader>m", function()
-      require("treesj").toggle()
-    end)
   end,
+  keys = {
+    {
+      "<leader>mm",
+      function()
+        require("treesj").toggle()
+      end,
+      desc = "Treesj - Toggle",
+    },
+  },
 }

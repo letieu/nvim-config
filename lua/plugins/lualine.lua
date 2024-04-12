@@ -1,4 +1,4 @@
-function recordStatus()
+local function recordStatus()
   local reg = vim.fn.reg_recording()
   if reg == "" then
     return ""
