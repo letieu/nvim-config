@@ -1,3 +1,12 @@
+local function macro()
+  local reg = vim.fn.reg_recording()
+  if reg == "" then
+    return ""
+  end
+
+  return "REC: " .. reg
+end
+
 return {
   "nvim-lualine/lualine.nvim",
   event = "BufRead",
@@ -24,6 +33,7 @@ return {
             "grapple",
           },
           "filename",
+          macro,
         },
         lualine_y = {
           "progress",
