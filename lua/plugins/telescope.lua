@@ -2,8 +2,13 @@ return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope-ui-select.nvim",
   },
-  config = true,
+  config = function()
+    require("telescope").setup {}
+    require("telescope").load_extension "ui-select"
+  end,
+  event = "LspAttach", -- For code actions
   keys = {
     {
       "<leader>ff",
