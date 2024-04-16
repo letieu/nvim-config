@@ -4,6 +4,13 @@ return {
     require "plugins.diffview"
   end,
   opts = {},
+  cmd= {
+    "DiffviewOpen",
+    "DiffviewClose",
+    "DiffviewToggleFiles",
+    "DiffviewFocusFiles",
+    "DiffviewFileHistory",
+  },
   keys = {
     {
       "<leader>do",
@@ -15,14 +22,14 @@ return {
     {
       "<leader>dl",
       function()
-        require("diffview").file_history()
+        vim.cmd("DiffviewFileHistory %")
       end,
-      desc = "Diffview file history",
+      desc = "Diffview current file history",
     },
     {
       "<leader>dL",
       function()
-        require("diffview").file_history { current = false }
+        require("diffview").file_history {}
       end,
       desc = "Diffview file history (all)",
     },
