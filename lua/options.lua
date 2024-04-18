@@ -1,16 +1,23 @@
-vim.opt.showmode = false
--- vim.opt.cmdheight = 0
+vim.g.mapleader = " "
+vim.opt.clipboard = "unnamedplus" -- copy/paste to system clipboard
+vim.opt.swapfile = false -- don't create swap files
+vim.opt.showmode = false -- don't show mode on cmd line, we have statusline for that
 vim.opt.laststatus = 3 -- global statusline
+vim.opt.signcolumn = "yes" -- always show sign column
+vim.opt.termguicolors = true -- enable true colors
+vim.opt.timeoutlen = 400 -- time to wait for a mapped sequence to complete
+vim.opt.undofile = true -- persistent undo
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.updatetime = 250 -- interval for writing swap file to disk, also used by gitsigns
 
+-- Folding
 vim.opt.foldlevel = 20
 vim.opt.foldenable = true
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
-vim.opt.title = true
-vim.opt.clipboard = "unnamedplus"
-vim.opt.cursorline = true
-
+-- Spell
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
 
@@ -21,32 +28,14 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 
-vim.opt.fillchars = { eob = " " }
+-- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.mouse = "a"
-vim.opt.swapfile = false
 
 -- Numbers
 vim.opt.number = true
 vim.opt.ruler = false
 vim.opt.relativenumber = true
-
-vim.opt.signcolumn = "yes"
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-vim.opt.termguicolors = true
-vim.opt.timeoutlen = 400
-vim.opt.undofile = true
-
--- interval for writing swap file to disk, also used by gitsigns
-vim.opt.updatetime = 250
-
--- go to previous/next line with h,l,left arrow and right arrow
--- when cursor reaches end/beginning of line
-vim.opt.whichwrap:append "<>[]hl"
-
-vim.g.mapleader = " "
 
 -- disable some builtin vim plugins
 local default_disable_plugins = {
