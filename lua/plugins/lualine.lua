@@ -1,10 +1,13 @@
-local function macro()
-  local reg = vim.fn.reg_recording()
-  if reg == "" then
-    return ""
+local function mark_status()
+  local marks = vim.fn.getmarklist(vim.fn.bufnr "%")
+  local result = {}
+  for _, mark in ipairs(marks) do
+    if mark.mark:match "[a-z]" then
+      table.insert(result, mark.mark)
+    end
   end
 
-  return "REC: " .. reg
+  return table.concat(result, " ")
 end
 
 return {
@@ -33,7 +36,7 @@ return {
             "grapple",
           },
           "filename",
-          macro,
+          mark_status,
         },
         lualine_y = {
           "progress",
