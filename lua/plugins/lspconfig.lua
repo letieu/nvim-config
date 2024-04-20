@@ -15,7 +15,7 @@ local servers = {
 
 return {
   "neovim/nvim-lspconfig",
-  event = { "VimEnter" },
+  evnet = { "BufReadPost", "BufNewFile", "BufWritePre" },
   config = function()
     local lspconfig = require "lspconfig"
     local capabilities = require("helper.lsp").capabilities
