@@ -12,7 +12,7 @@ end
 
 return {
   "nvim-lualine/lualine.nvim",
-  event = "BufRead",
+  event = "VeryLazy",
   config = function()
     require("lualine").setup {
       options = {

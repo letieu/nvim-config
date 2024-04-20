@@ -3,6 +3,6 @@
 return {
   { "folke/neodev.nvim", opts = {}, ft = { "lua" } },
   { "windwp/nvim-autopairs", config = true, event = { "InsertEnter" } },
-  { "j-hui/fidget.nvim", config = true, event = { "BufRead" } },
+  { "j-hui/fidget.nvim", config = true, event = { "VimEnter" } },
   { "ellisonleao/carbon-now.nvim", lazy = true, cmd = "CarbonNow", opts = { open_cmd = "open" } },
 }
