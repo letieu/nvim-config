@@ -29,7 +29,7 @@ return {
     {
       "<leader>dL",
       function()
-        require("diffview").file_history {}
+        vim.cmd("DiffviewFileHistory")
       end,
       desc = "Diffview file history (all)",
     },
