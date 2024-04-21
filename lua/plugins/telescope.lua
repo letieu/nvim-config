@@ -41,7 +41,7 @@ return {
     {
       "<leader>ft",
       function()
-        require("telescope.builtin").todo { keywords = { "TODO", "FIXME", "HACK" } }
+        vim.cmd "TodoTelescope keywords=TODO,FIX"
       end,
       desc = "Telescope todo",
     },
