@@ -11,8 +11,8 @@ local function mark_status()
 end
 
 return {
-  "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
+  "letieu/lualine.nvim",
+  event = "UiEnter",
   config = function()
     require("lualine").setup {
       options = {
@@ -20,15 +20,14 @@ return {
         section_separators = "",
         disabled_filetypes = {
           statusline = {},
-          winbar = {},
         },
         ignore_focus = {},
         always_divide_middle = true,
         globalstatus = true,
       },
       sections = {
-        lualine_a = { "mode" },
-        lualine_b = { "branch", "diff", "diagnostics" },
+        lualine_a = { "branch" },
+        lualine_b = { "diagnostics" },
         lualine_c = {
           "%=",
           {
@@ -37,6 +36,9 @@ return {
           },
           "filename",
           mark_status,
+        },
+        lualine_x = {
+          "filetype",
         },
         lualine_y = {
           "progress",
@@ -53,10 +55,6 @@ return {
         lualine_y = {},
         lualine_z = {},
       },
-      tabline = {},
-      winbar = {},
-      inactive_winbar = {},
-      extensions = {},
     }
   end,
 }
