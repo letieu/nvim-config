@@ -30,10 +30,7 @@ return {
         lualine_b = { "diagnostics" },
         lualine_c = {
           "%=",
-          {
-            icon = "⚓",
-            "grapple",
-          },
+          "grapple",
           "filename",
           mark_status,
         },

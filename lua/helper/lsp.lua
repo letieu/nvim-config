@@ -15,10 +15,6 @@ local mapping = function(buf)
 
   map("n", "<leader>cl", vim.lsp.codelens.run, bufopts)
   map("n", "gr", vim.lsp.buf.references, bufopts)
-
-  map("n", "<leader>f", vim.diagnostic.open_float, bufopts)
-  map("n", "[d", vim.diagnostic.goto_prev, bufopts)
-  map("n", "]d", vim.diagnostic.goto_next, bufopts)
 end
 
 M.on_attach = function(client_id, buf)
