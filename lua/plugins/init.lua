@@ -6,4 +6,18 @@ return {
   { "j-hui/fidget.nvim", config = true, event = { "VeryLazy" } },
   { "ellisonleao/carbon-now.nvim", lazy = true, cmd = "CarbonNow", opts = { open_cmd = "open" } },
   { "folke/todo-comments.nvim", event = { "VeryLazy" }, config = true },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("cyberdream").setup {
+        transparent = true,
+        italic_comments = true,
+        borderless_telescope = false,
+        terminal_colors = false,
+      }
+      vim.cmd "colorscheme cyberdream" -- set the colorscheme
+    end,
+  },
 }
