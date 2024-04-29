@@ -6,8 +6,6 @@ vim.keymap.set("n", "<leader>w", ":w<CR>", nore_and_silent)
 
 -- ==================== Diagnostic ====================
 vim.keymap.set("n", "<leader>f", vim.diagnostic.open_float, nore_and_silent)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, nore_and_silent)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, nore_and_silent)
 
 -- ==================== Quickfix ====================
 vim.keymap.set("n", "[q", ":cprev<CR>", nore_and_silent)
