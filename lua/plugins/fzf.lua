@@ -3,6 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require("fzf-lua").setup {}
+    require("fzf-lua").register_ui_select()
   end,
   keys = {
     {

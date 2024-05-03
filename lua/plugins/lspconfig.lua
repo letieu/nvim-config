@@ -32,7 +32,6 @@ return {
       lspconfig[name].setup(config)
     end
 
-    -- attach lsp keymaps
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(args)
