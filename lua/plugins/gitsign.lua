@@ -1,6 +1,6 @@
 return {
   "lewis6991/gitsigns.nvim",
-  evnet = { "BufReadPost" },
+  evnet = { "VeryLazy" },
   config = true,
   keys = {
     {

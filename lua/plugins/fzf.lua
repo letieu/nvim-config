@@ -3,7 +3,11 @@ return {
   event = "VeryLazy",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    require("fzf-lua").setup {}
+    require("fzf-lua").setup { winopts = {
+      preview = {
+        hidden = "hidden",
+      },
+    } }
     require("fzf-lua").register_ui_select()
   end,
   keys = {
