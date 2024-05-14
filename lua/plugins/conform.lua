@@ -6,6 +6,7 @@ return {
         lua = { "stylua" },
         javascript = { { "prettier", "eslint_d" } },
         typescript = { { "prettier", "eslint_d" } },
+        vue = { { "prettier", "eslint_d" } },
         python = { "isort", "black" },
         json = { "jq" },
         yaml = { "yq" },
