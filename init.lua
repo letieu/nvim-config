@@ -16,3 +16,4 @@ require("lazy").setup "plugins"
 
 require "autocmd"
 require "mappings"
+require "terminal"
