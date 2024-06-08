@@ -15,8 +15,8 @@ vim.keymap.set("n", "<leader>q", ":copen<CR>", nore_and_silent)
 -- ==================== Mark ====================
 vim.keymap.set("n", "<leader>mc", ":delmarks a-z<CR>", nore_and_silent)
 
--- ==================== Navigate ====================
-vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
-vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
-vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
-vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
+-- -- ==================== Navigate ====================
+-- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
+-- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
+-- vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
+-- vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")

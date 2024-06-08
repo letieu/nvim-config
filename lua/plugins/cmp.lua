@@ -1,10 +1,19 @@
 return {
   "hrsh7th/nvim-cmp",
-  event = {
-    "InsertEnter",
-  },
+  -- event = {
+  --   "InsertEnter",
+  -- },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+
+    {
+      "MattiasMTS/cmp-dbee",
+      dependencies = {
+        { "kndndrj/nvim-dbee" }
+      },
+      ft = "sql", -- optional but good to have
+      opts = {},  -- needed
+    },
   },
   config = function()
     local cmp = require "cmp"
@@ -21,6 +30,7 @@ return {
       },
       sources = cmp.config.sources {
         { name = "nvim_lsp" },
+        { name = "cmp-dbee" },
       },
       matching = {
         disallow_fuzzy_matching = true,

@@ -10,6 +10,7 @@ local servers = {
   "intelephense",
   "ansiblels",
   "dartls",
+  "pylsp",
   { "rust_analyzer", config = { settings = { ["rust-analyzer"] = { checkOnSave = { command = "clippy" } } } } },
 }
 
