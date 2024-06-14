@@ -1,18 +1,17 @@
 return {
   "hrsh7th/nvim-cmp",
-  -- event = {
-  --   "InsertEnter",
-  -- },
+  event = {
+    "InsertEnter",
+  },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
-
     {
       "MattiasMTS/cmp-dbee",
       dependencies = {
         { "kndndrj/nvim-dbee" }
       },
       ft = "sql", -- optional but good to have
-      opts = {},  -- needed
+      config = function() require("cmp-dbee").setup({}) end
     },
   },
   config = function()
