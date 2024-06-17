@@ -11,7 +11,7 @@ local function mark_status()
 end
 
 return {
-  "letieu/lualine.nvim",
+  "nvim-lualine/lualine.nvim",
   event = "UiEnter",
   config = function()
     require("lualine").setup {
