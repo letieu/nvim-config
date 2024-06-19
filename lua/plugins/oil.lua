@@ -1,6 +1,10 @@
 return {
   "stevearc/oil.nvim",
-  opts = {},
+  opts = {
+    keymaps = {
+      ["<C-y>"] = "actions.yank_entry",
+    }
+  },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
     {
