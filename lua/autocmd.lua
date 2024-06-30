@@ -15,6 +15,14 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+  pattern = "mysql",
+  callback = function()
+    vim.bo.tabstop = 4
+    vim.bo.commentstring = "-- %s"
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
   pattern = "go",
   callback = function()
     vim.bo.tabstop = 4

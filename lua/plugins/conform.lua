@@ -11,6 +11,7 @@ return {
         json = { "jq" },
         yaml = { "yq" },
         dart = { "dartfmt" },
+        sql = { "sqlfmt" }
       },
     }
   end,
