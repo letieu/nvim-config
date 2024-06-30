@@ -10,6 +10,7 @@ vim.opt.undofile = true -- persistent undo
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.updatetime = 250 -- interval for writing swap file to disk, also used by gitsigns
+vim.opt.cursorline = true
 
 -- Folding
 vim.opt.foldlevel = 20
