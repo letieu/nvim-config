@@ -5,7 +5,7 @@ return {
   { "windwp/nvim-autopairs",    config = true,          event = { "InsertEnter" } },
   { "j-hui/fidget.nvim",        config = true,          event = { "VeryLazy" } },
   { "folke/todo-comments.nvim", event = { "VeryLazy" }, config = true },
-  { "williamboman/mason.nvim",  config = true },
+  { "williamboman/mason.nvim",  event = { "VeryLazy" }, config = true },
   {
     'mikesmithgh/kitty-scrollback.nvim',
     enabled = true,
