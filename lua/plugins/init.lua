@@ -7,22 +7,6 @@ return {
   { "folke/todo-comments.nvim", event = { "VeryLazy" }, config = true },
   { "williamboman/mason.nvim",  event = { "VeryLazy" }, config = true },
   {
-    'mikesmithgh/kitty-scrollback.nvim',
-    enabled = true,
-    lazy = true,
-    cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
-    event = { 'User KittyScrollbackLaunch' },
-    config = function()
-      require('kitty-scrollback').setup()
-    end,
-  },
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function() vim.fn["mkdp#util#install"]() end,
-  },
-  {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
