@@ -15,10 +15,13 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "mysql",
+  pattern = "sql",
   callback = function()
     vim.bo.tabstop = 4
     vim.bo.commentstring = "-- %s"
+    vim.keymap.set('n', '<leader>r', ':normal vip<CR><PLUG>(DBUI_ExecuteQuery)', { buffer = true })
+
+    print("mysql")
   end,
 })
 

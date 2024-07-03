@@ -5,14 +5,6 @@ return {
   },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
-    {
-      "MattiasMTS/cmp-dbee",
-      dependencies = {
-        { "kndndrj/nvim-dbee" }
-      },
-      ft = "sql", -- optional but good to have
-      config = function() require("cmp-dbee").setup({}) end
-    },
   },
   config = function()
     local cmp = require "cmp"
@@ -29,7 +21,6 @@ return {
       },
       sources = cmp.config.sources {
         { name = "nvim_lsp" },
-        { name = "cmp-dbee" },
       },
       matching = {
         disallow_fuzzy_matching = true,
@@ -42,5 +33,13 @@ return {
         ghost_text = false,
       },
     }
+
+    cmp.setup.filetype('sql', {
+      sources = cmp.config.sources({
+        { name = 'vim-dadbod-completion' },
+      }, {
+        { name = 'buffer' },
+      })
+    })
   end,
 }
