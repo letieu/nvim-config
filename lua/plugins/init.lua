@@ -24,5 +24,4 @@ return {
       vim.cmd.colorscheme "catppuccin-mocha"
     end
   },
-  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" }
 }
