@@ -5,6 +5,7 @@ return {
   },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    "saadparwaiz1/cmp_luasnip"
   },
   config = function()
     local cmp = require "cmp"
@@ -21,6 +22,7 @@ return {
       },
       sources = cmp.config.sources {
         { name = "nvim_lsp" },
+        { name = 'luasnip' },
       },
       matching = {
         disallow_fuzzy_matching = true,
@@ -31,6 +33,11 @@ return {
       },
       experimental = {
         ghost_text = false,
+      },
+      snippet = {
+        expand = function(args)
+          require('luasnip').lsp_expand(args.body)
+        end,
       },
     }
 
