@@ -43,7 +43,7 @@ presets.heading = {
     heading_2 = {
       style = "label",
 
-      padding_left = "󰍟 ",
+      padding_left = "󰍟󰍟 ",
       padding_right = "     ",
 
       hl = "label_h2"
@@ -51,7 +51,7 @@ presets.heading = {
     heading_3 = {
       style = "label",
 
-      padding_left = "󰍟 ",
+      padding_left = "󰍟󰍟󰍟 ",
       padding_right = "     ",
 
       hl = "label_h3"
@@ -59,7 +59,7 @@ presets.heading = {
     heading_4 = {
       style = "label",
 
-      padding_left = "󰍟 ",
+      padding_left = "󰍟󰍟󰍟󰍟 ",
       padding_right = "     ",
 
       hl = "label_h4"
@@ -67,7 +67,7 @@ presets.heading = {
     heading_5 = {
       style = "label",
 
-      padding_left = "󰍟 ",
+      padding_left = "󰍟󰍟󰍟󰍟󰍟 ",
       padding_right = "     ",
 
       hl = "label_h5"
@@ -75,7 +75,7 @@ presets.heading = {
     heading_6 = {
       style = "label",
 
-      padding_left = "󰍟 ",
+      padding_left = "󰍟󰍟󰍟󰍟󰍟󰍟󰍟 ",
       padding_right = "     ",
 
       hl = "label_h6"
