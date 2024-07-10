@@ -24,4 +24,5 @@ return {
       vim.cmd.colorscheme "catppuccin-mocha"
     end
   },
+  { 'akinsho/git-conflict.nvim', version = "*", config = true }
 }
