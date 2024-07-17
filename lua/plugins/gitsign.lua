@@ -4,18 +4,45 @@ return {
   config = true,
   keys = {
     {
-      "<leader>gh",
+      "<leader>ghv",
       function()
         require("gitsigns").preview_hunk()
       end,
       desc = "Gitsigns preview hunk",
     },
     {
-      "<leader>gr",
+      "<leader>ghr",
       function()
         require("gitsigns").reset_hunk()
+        vim.notify("Hunk reset", "info", { title = "Gitsigns" })
       end,
       desc = "Gitsigns reset hunk",
+    },
+    {
+      "]h",
+      function()
+        require("gitsigns").next_hunk()
+      end,
+    },
+    {
+      "[h",
+      function()
+        require("gitsigns").prev_hunk()
+      end,
+    },
+    {
+      "<leader>ghs",
+      function()
+        require("gitsigns").stage_hunk()
+        vim.notify("Hunk staged", "info", { title = "Gitsigns" })
+      end,
+    },
+    {
+      "<leader>ghu",
+      function()
+        require("gitsigns").undo_stage_hunk()
+        vim.notify("Hunk unstaged", "info", { title = "Gitsigns" })
+      end,
     },
     {
       "<leader>gb",
@@ -24,5 +51,11 @@ return {
       end,
       desc = "Gitsigns blame line",
     },
+    {
+      "<leader>gB",
+      function()
+        require("gitsigns").blame()
+      end,
+    }
   },
 }
