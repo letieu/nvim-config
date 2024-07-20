@@ -8,15 +8,6 @@ return {
   { "williamboman/mason.nvim",  event = { "VeryLazy" }, config = true },
   { 'akinsho/git-conflict.nvim', version = "*", config = true },
   {
-    'mikesmithgh/kitty-scrollback.nvim',
-    lazy = true,
-    cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
-    event = { 'User KittyScrollbackLaunch' },
-    config = function()
-      require('kitty-scrollback').setup()
-    end,
-  },
-  {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
