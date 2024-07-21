@@ -4,27 +4,27 @@ presets.heading = {
   label_hls_dark = {
     {
       group_name = "label_h1",
-      value = { bg = "#453244", fg = "#f38ba8", bold = true }
+      value = { bg = "#d20f39", fg = "#eff1f5", bold = true }
     },
     {
       group_name = "label_h2",
-      value = { bg = "#46393e", fg = "#fab387", bold = true }
+      value = { bg = "#fe640b", fg = "#eff1f5", bold = true }
     },
     {
       group_name = "label_h3",
-      value = { bg = "#464245", fg = "#f9e2af", bold = true }
+      value = { bg = "#df8e1d", fg = "#eff1f5", bold = true }
     },
     {
       group_name = "label_h4",
-      value = { bg = "#374243", fg = "#a6e3a1", bold = true }
+      value = { bg = "#40a02b", fg = "#eff1f5", bold = true }
     },
     {
       group_name = "label_h5",
-      value = { bg = "#2e3d51", fg = "#74c7ec", bold = true }
+      value = { bg = "#179299", fg = "#eff1f5", bold = true }
     },
     {
       group_name = "label_h6",
-      value = { bg = "#393b54", fg = "#b4befe", bold = true }
+      value = { bg = "#04a5e5", fg = "#eff1f5", bold = true }
     },
   },
 
