@@ -11,7 +11,8 @@ return {
         json = { "jq" },
         yaml = { "yq" },
         dart = { "dartfmt" },
-        sql = { "sqlfmt" }
+        sql = { "sqlfmt" },
+        go = { "gofmt", "goimports" },
       },
     }
   end,
