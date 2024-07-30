@@ -6,12 +6,34 @@ local servers = {
   "solidity",
   "dockerls",
   "gopls",
-  "tsserver",
   "intelephense",
   "ansiblels",
   "dartls",
   "pylsp",
-  { "rust_analyzer", config = { settings = { ["rust-analyzer"] = { checkOnSave = { command = "clippy" } } } } },
+  {
+    "rust_analyzer",
+    config = {
+      settings = {
+        ["rust-analyzer"] = {
+          checkOnSave = {
+            command = "clippy",
+          },
+        },
+      },
+    },
+  },
+  {
+    "tsserver",
+    config = {
+      settings = {
+        typescript = {
+          preferences = {
+            importModuleSpecifier = "project-relative"
+          }
+        }
+      },
+    }
+  }
 }
 
 return {
