@@ -10,6 +10,7 @@ local servers = {
   "ansiblels",
   "dartls",
   "pylsp",
+  "bufls",
   {
     "rust_analyzer",
     config = {
