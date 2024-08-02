@@ -1,13 +1,22 @@
 local setHighlight = function()
+  local defaultH1 = vim.api.nvim_get_hl_by_name('markdownH1', true)
+  local defaultH2 = vim.api.nvim_get_hl_by_name('markdownH2', true)
+  local defaultH3 = vim.api.nvim_get_hl_by_name('markdownH3', true)
+  local defaultH4 = vim.api.nvim_get_hl_by_name('markdownH4', true)
+  local defaultH5 = vim.api.nvim_get_hl_by_name('markdownH5', true)
+  local defaultH6 = vim.api.nvim_get_hl_by_name('markdownH6', true)
+  local cursorLine = vim.api.nvim_get_hl_by_name('CursorLine', true)
+
   -- Headings
-  vim.api.nvim_set_hl(0, 'Md_h1', { fg = '#d20f39', bg = '#eff1f5', bold = true })
-  vim.api.nvim_set_hl(0, 'Md_h2', { fg = '#fe640b', bg = '#eff1f5', bold = true })
-  vim.api.nvim_set_hl(0, 'Md_h3', { fg = '#df8e1d', bg = '#eff1f5', bold = true })
-  vim.api.nvim_set_hl(0, 'Md_h4', { fg = '#40a02b', bg = '#eff1f5', bold = true })
-  vim.api.nvim_set_hl(0, 'Md_h5', { fg = '#179299', bg = '#eff1f5', bold = true })
+  vim.api.nvim_set_hl(0, 'Md_h1', { fg = defaultH1.foreground, bg = defaultH1.background, bold = true })
+  vim.api.nvim_set_hl(0, 'Md_h2', { fg = defaultH2.foreground, bg = defaultH2.background, bold = true })
+  vim.api.nvim_set_hl(0, 'Md_h3', { fg = defaultH3.foreground, bg = defaultH3.background, bold = true })
+  vim.api.nvim_set_hl(0, 'Md_h4', { fg = defaultH4.foreground, bg = defaultH4.background, bold = true })
+  vim.api.nvim_set_hl(0, 'Md_h5', { fg = defaultH5.foreground, bg = defaultH5.background, bold = true })
+  vim.api.nvim_set_hl(0, 'Md_h6', { fg = defaultH5.foreground, bg = defaultH5.background, bold = true })
 
   -- Code
-  vim.api.nvim_set_hl(0, 'Md_code', { bg = '#e6e9ef' })
+  vim.api.nvim_set_hl(0, 'Md_code', { bg = cursorLine.background })
 end
 
 return {
@@ -52,7 +61,7 @@ return {
           'Md_h3',
           'Md_h4',
           'Md_h5',
-          'RenderMarkdownH6Bg',
+          'Md_h6',
         },
         -- The 'level' is used to index into the array using a clamp
         -- Highlight for the heading and sign icons
@@ -62,7 +71,7 @@ return {
           'Md_h3',
           'Md_h4',
           'Md_h5',
-          'RenderMarkdownH6',
+          'Md_h6',
         },
       },
       code = {
