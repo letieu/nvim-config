@@ -8,6 +8,31 @@ return {
       symbols = {
         merge_commit = '',
         commit = '',
+        merge_commit_end = '',
+        commit_end = '',
+
+        -- Advanced symbols
+        GVER = '',
+        GHOR = '',
+        GCLD = '',
+        GCRD = '╭',
+        GCLU = '',
+        GCRU = '',
+        GLRU = '',
+        GLRD = '',
+        GLUD = '',
+        GRUD = '',
+        GFORKU = '',
+        GFORKD = '',
+
+        GRUDCD = '',
+        GRUDCU = '',
+        GLUDCD = '',
+        GLUDCU = '',
+        GLRDCL = '',
+        GLRDCR = '',
+        GLRUCL = '',
+        GLRUCR = '',
       },
       format = {
         timestamp = '%H:%M %d-%m-%y',
