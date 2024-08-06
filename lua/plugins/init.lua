@@ -7,13 +7,4 @@ return {
   { "folke/todo-comments.nvim",  event = { "VeryLazy" }, config = true },
   { "williamboman/mason.nvim",   event = { "VeryLazy" }, config = true },
   { 'akinsho/git-conflict.nvim', version = "*",          config = true },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme "catppuccin-latte"
-      -- vim.cmd.colorscheme "catppuccin-mocha"
-    end
-  },
 }

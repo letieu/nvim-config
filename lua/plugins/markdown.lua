@@ -13,7 +13,7 @@ local setHighlight = function()
   vim.api.nvim_set_hl(0, 'Md_h3', { fg = defaultH3.foreground, bg = defaultH3.background, bold = true })
   vim.api.nvim_set_hl(0, 'Md_h4', { fg = defaultH4.foreground, bg = defaultH4.background, bold = true })
   vim.api.nvim_set_hl(0, 'Md_h5', { fg = defaultH5.foreground, bg = defaultH5.background, bold = true })
-  vim.api.nvim_set_hl(0, 'Md_h6', { fg = defaultH5.foreground, bg = defaultH5.background, bold = true })
+  vim.api.nvim_set_hl(0, 'Md_h6', { fg = defaultH6.foreground, bg = defaultH6.background, bold = true })
 
   -- Code
   vim.api.nvim_set_hl(0, 'Md_code', { bg = cursorLine.background })
