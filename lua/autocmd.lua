@@ -1,6 +1,8 @@
+local group = vim.api.nvim_create_augroup("UserConfig", {})
+
 -- blink yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
-  group = vim.api.nvim_create_augroup("YankHighlight", {}),
+  group = group,
   pattern = "*",
   callback = function()
     vim.highlight.on_yank { higroup = "IncSearch", timeout = 150 }
@@ -8,6 +10,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+  group = group,
   pattern = "dart",
   callback = function()
     vim.bo.commentstring = "// %s"
@@ -15,6 +18,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+  group = group,
   pattern = "sql",
   callback = function()
     vim.bo.tabstop = 4
@@ -26,10 +30,19 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+  group = group,
   pattern = "go",
   callback = function()
     vim.bo.tabstop = 4
     vim.bo.shiftwidth = 4
     vim.bo.softtabstop = 4
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = group,
+  pattern = "gitgraph",
+  callback = function()
+    vim.print("okok")
   end,
 })
