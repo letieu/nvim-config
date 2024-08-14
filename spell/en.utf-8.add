@@ -33,3 +33,6 @@ github
 subquery
 Postgres
 namespace
+golang
+protobuf
+plattform
