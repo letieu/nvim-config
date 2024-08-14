@@ -24,8 +24,6 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.tabstop = 4
     vim.bo.commentstring = "-- %s"
     vim.keymap.set('n', '<leader>r', ':normal vip<CR><PLUG>(DBUI_ExecuteQuery)', { buffer = true })
-
-    print("mysql")
   end,
 })
 
@@ -36,13 +34,5 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.tabstop = 4
     vim.bo.shiftwidth = 4
     vim.bo.softtabstop = 4
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-  group = group,
-  pattern = "gitgraph",
-  callback = function()
-    vim.print("okok")
   end,
 })
