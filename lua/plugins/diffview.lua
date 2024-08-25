@@ -19,7 +19,7 @@ return {
     {
       "<leader>fh",
       function()
-        require("diffview").file_history()
+        require("diffview").file_history(nil, "%")
       end,
     }
   },

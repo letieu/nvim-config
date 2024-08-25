@@ -36,3 +36,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.softtabstop = 4
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = group,
+  pattern = "hyprlang",
+  callback = function()
+    vim.bo.commentstring = "# %s"
+  end,
+})
