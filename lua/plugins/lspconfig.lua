@@ -10,7 +10,7 @@ local servers = {
   "ansiblels",
   "dartls",
   "pylsp",
-  "bufls",
+  "pbls",
   {
     "rust_analyzer",
     config = {
@@ -24,7 +24,7 @@ local servers = {
     },
   },
   {
-    "tsserver",
+    "ts_ls",
     config = {
       settings = {
         typescript = {
