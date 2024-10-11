@@ -14,8 +14,7 @@ local mapping = function(buf)
   map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, bufopts)
 
   map("n", "<leader>cl", vim.lsp.codelens.run, bufopts)
-  -- map("n", "gr", vim.lsp.buf.references, bufopts)
-  map("n", "gr", "<cmd>Trouble lsp_references<CR>", bufopts)
+  map("n", "gr", vim.lsp.buf.references, bufopts)
 end
 
 M.on_attach = function(client_id, buf)

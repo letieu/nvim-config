@@ -15,6 +15,7 @@ return {
         dart = { "dartfmt" },
         sql = { "sqlfmt" },
         go = { "gofmt", "goimports" },
+        nix = { "nixpkgs-fmt" },
       },
     }
   end,
