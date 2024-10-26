@@ -1,0 +1,28 @@
+{
+  "Console log": {
+    "prefix": ["cl", "con"],
+    "body": "console.log(${1});$0"
+  },
+  "Try catch": {
+    "prefix": ["try", "trc"],
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (error) {",
+      "\t$2",
+      "}"
+    ]
+  },
+  "Try catch with finally": {
+    "prefix": ["tryf"],
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (error) {",
+      "\t$2",
+      "} finally {",
+      "\t$3",
+      "}"
+    ]
+  }
+}
