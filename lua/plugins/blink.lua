@@ -4,9 +4,9 @@ return {
   version = 'v0.*',
   opts = {
     keymap = {
-      accept = '<Tab>',
-      select_prev = { '<Up>', '<C-k>' },
-      select_next = { '<Down>', '<C-j>' },
+      ['<Tab>'] = { 'select_and_accept' },
+      ['<C-j>'] = { 'select_next' },
+      ['<C-k>'] = { 'select_prev' },
     },
   }
 }
