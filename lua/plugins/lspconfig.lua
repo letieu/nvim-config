@@ -1,6 +1,9 @@
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPost", "BufNewFile", "BufWritePre" },
+  dependencies = {
+    "williamboman/mason-lspconfig.nvim"
+  },
   config = function()
     local lspconfig = require "lspconfig"
     local mason_registry = require('mason-registry')
@@ -79,5 +82,8 @@ return {
         on_lsp_attach(args.data.client_id, args.buf)
       end,
     })
+
+    -- auto install lsp server
+    require("mason-lspconfig").setup()
   end,
 }
