@@ -10,7 +10,8 @@ return {
       default = { 'lsp', 'path', 'snippets', 'buffer', 'dadbod' },
     },
     keymap = {
-      ['<Tab>'] = { 'select_and_accept', 'fallback' },
+      ['<Tab>'] = { 'select_and_accept', 'snippet_forward', 'fallback' },
+      ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
       ['<C-j>'] = { 'select_next' },
       ['<C-k>'] = { 'select_prev' },
     },
