@@ -8,6 +8,7 @@ return {
         lua = { "stylua" },
         javascript = { "prettier", "eslint_d", stop_after_first = true },
         typescript = { "prettier", "eslint_d", stop_after_first = true },
+        typescriptreact = { "prettier", "eslint_d", stop_after_first = true },
         vue = { "prettier", "eslint_d" },
         python = { "isort", "black" },
         json = { "jq" },
