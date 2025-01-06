@@ -15,6 +15,19 @@ return {
       ['<C-j>'] = { 'select_next' },
       ['<C-k>'] = { 'select_prev' },
     },
-    signature = { enabled = true }
+    signature = { enabled = true },
+    completion = {
+      menu = {
+        draw = {
+          columns = { { "kind_icon" }, { "label", gap = 1 } },
+          components = {
+            label = {
+              text = require("colorful-menu").blink_components_text,
+              highlight = require("colorful-menu").blink_components_highlight,
+            },
+          },
+        },
+      },
+    },
   }
 }

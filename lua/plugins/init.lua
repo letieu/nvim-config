@@ -7,4 +7,5 @@ return {
   { "folke/todo-comments.nvim",  event = { "VeryLazy" }, config = true },
   { "williamboman/mason.nvim",   event = { "VeryLazy" }, config = true },
   { 'akinsho/git-conflict.nvim', config = true },
+  { "xzbdmw/colorful-menu.nvim", config = true,          event = { "InsertEnter" } },
 }
