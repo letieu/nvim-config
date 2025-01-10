@@ -8,4 +8,10 @@ return {
   { "williamboman/mason.nvim",   event = { "VeryLazy" }, config = true },
   { 'akinsho/git-conflict.nvim', config = true },
   { "xzbdmw/colorful-menu.nvim", config = true,          event = { "InsertEnter" } },
+  {
+    "karb94/neoscroll.nvim",
+    opts = {
+      easing = "sine"
+    }
+  }
 }
