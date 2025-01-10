@@ -1,13 +1,21 @@
 return {
   'saghen/blink.cmp',
-  lazy = false,
   version = 'v0.*',
   opts = {
     sources = {
       providers = {
-        dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+        dadbod = {
+          name = "Dadbod",
+          module = "vim_dadbod_completion.blink",
+          score_offset = 100,
+        },
+        lazydev = {
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
+          score_offset = 100,
+        },
       },
-      default = { 'lsp', 'path', 'snippets', 'buffer', 'dadbod' },
+      default = { 'dadbod', 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
     },
     keymap = {
       ['<Tab>'] = { 'select_and_accept', 'snippet_forward', 'fallback' },

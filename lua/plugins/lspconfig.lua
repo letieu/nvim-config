@@ -2,7 +2,6 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPost", "BufNewFile", "BufWritePre" },
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
     'saghen/blink.cmp'
   },
   opts = {
@@ -20,9 +19,9 @@ return {
       dartls = {},
       pylsp = {},
       pbls = {},
-      volar = {},
       prismals = {},
       rust_analyzer = {},
+      bashls = {},
       ts_ls = {
         settings = {
           typescript = {
@@ -40,8 +39,6 @@ return {
       config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
       lspconfig[server].setup(config)
     end
-
-    require("mason-lspconfig").setup()
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),

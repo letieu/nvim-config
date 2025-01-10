@@ -1,10 +1,8 @@
 return {
   "ibhagwan/fzf-lua",
-  event = "VeryLazy",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local config = require("helper/fzf-config")
-
     require("fzf-lua").setup(config)
     require("fzf-lua").register_ui_select()
   end,
