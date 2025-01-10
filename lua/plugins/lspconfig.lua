@@ -43,8 +43,7 @@ return {
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(args)
-        local on_lsp_attach = require("helper.lsp").on_attach
-        on_lsp_attach(args.data.client_id, args.buf)
+        require("helper.lsp").on_attach(args.data.client_id, args.buf)
       end,
     })
   end
