@@ -4,7 +4,7 @@ return {
   fzf_opts = { ["--no-separator"] = false },
   winopts  = {
     preview = {
-      hidden         = 'hidden',      -- hidden|nohidden
+      hidden = 'hidden',   -- hidden|nohidden
     },
   },
   lsp      = {

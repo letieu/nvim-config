@@ -44,5 +44,11 @@ return {
       end,
       desc = "Fzf git status",
     },
+    {
+      "<leader>fs",
+      function()
+        require("fzf-lua").lsp_document_symbols()
+      end,
+    }
   },
 }
