@@ -14,12 +14,9 @@ return {
           accept = "<C-,>",
           accept_word = false,
           accept_line = false,
-          next = "<M-]>",
-          prev = "<M-[>",
-          dismiss = "<C-]>",
         },
       },
-      copilot_node_command = 'node', -- Node.js version must be > 18.x
+      copilot_node_command = 'node',
       server_opts_overrides = {},
     })
   end

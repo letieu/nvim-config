@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+-- file type config
 vim.api.nvim_create_autocmd("FileType", {
   group = group,
   pattern = "dart",

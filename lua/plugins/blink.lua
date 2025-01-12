@@ -1,6 +1,7 @@
 return {
   'saghen/blink.cmp',
   version = 'v0.*',
+  event = { "InsertEnter", "CmdlineEnter" },
   opts = {
     sources = {
       providers = {
