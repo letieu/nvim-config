@@ -37,3 +37,13 @@ golang
 protobuf
 plattform
 TODO
+NamespaceConfig
+param
+buf
+bufs
+Bffers
+WorkspaceConfig
+ClientConfig
+init
+GrpcCallbacks
+CustomConfig

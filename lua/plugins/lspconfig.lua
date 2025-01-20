@@ -1,6 +1,5 @@
 return {
   "neovim/nvim-lspconfig",
-  event = { "BufReadPost", "BufNewFile", "BufWritePre" },
   dependencies = {
     'saghen/blink.cmp'
   },
@@ -22,6 +21,10 @@ return {
       prismals = {},
       rust_analyzer = {},
       bashls = {},
+      zls = {},
+      graphql = {
+        filetypes = { "graphql" },
+      },
       ts_ls = {
         settings = {
           typescript = {
@@ -30,7 +33,7 @@ return {
             }
           }
         },
-      }
+      },
     },
     mapping = function(buf)
       local bufopts = { noremap = true, silent = true, buffer = buf }

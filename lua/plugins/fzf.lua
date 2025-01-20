@@ -63,6 +63,13 @@ return {
       function()
         require("fzf-lua").lsp_document_symbols()
       end,
-    }
+    },
+    {
+      "<leader>fH",
+      function()
+        require("fzf-lua").help_tags()
+      end,
+      desc = "Fzf help tags",
+    },
   },
 }
