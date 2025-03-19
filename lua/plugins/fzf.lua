@@ -4,7 +4,10 @@ return {
   opts = {
     desc     = "fzf-lua defaults with `sk` as binary",
     fzf_bin  = "sk",
-    fzf_opts = { ["--no-separator"] = false },
+    fzf_opts = {
+      ["--no-separator"] = false,
+      ['--history'] = vim.fn.stdpath("data") .. '/fzf-lua-history',
+    },
     winopts  = {
       preview = {
         hidden = 'hidden', -- hidden|nohidden

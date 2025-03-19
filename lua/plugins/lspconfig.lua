@@ -22,6 +22,7 @@ return {
       rust_analyzer = {},
       bashls = {},
       zls = {},
+      hls = {},
       graphql = {
         filetypes = { "graphql" },
       },
