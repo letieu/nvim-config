@@ -1,7 +1,7 @@
 return {
   "cbochs/grapple.nvim",
   opts = {
-    scope = "git_branch",
+    scope = "git",
     icons = true,
     status = true,
     quick_select = "asqw",
