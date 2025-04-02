@@ -23,6 +23,7 @@ return {
       bashls = {},
       zls = {},
       hls = {},
+      kotlin_language_server = {},
       graphql = {
         filetypes = { "graphql" },
       },
