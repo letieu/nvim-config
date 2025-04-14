@@ -27,7 +27,18 @@ return {
       graphql = {
         filetypes = { "graphql" },
       },
+      denols = {
+        root_dir = function(fname)
+          local util = require 'lspconfig.util'
+          return util.root_pattern("deno.json", "deno.jsonc", "mod.ts")(fname)
+        end,
+      },
       ts_ls = {
+        root_dir = function(fname)
+          local util = require 'lspconfig.util'
+          return util.root_pattern("package.json", "tsconfig.json")(fname)
+        end,
+        single_file_support = false,
         settings = {
           typescript = {
             preferences = {
