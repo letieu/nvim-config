@@ -5,5 +5,11 @@ return {
   { "williamboman/mason.nvim",     config = true, event = { "VeryLazy" } },
   { 'akinsho/git-conflict.nvim',   config = true },
   { "xzbdmw/colorful-menu.nvim",   config = true, event = { "InsertEnter" } },
-  { "norcalli/nvim-colorizer.lua", config = true }
+  { "norcalli/nvim-colorizer.lua", config = true },
+  {
+    "m4xshen/hardtime.nvim",
+    lazy = false,
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {},
+  },
 }
