@@ -10,13 +10,8 @@ return {
           module = "vim_dadbod_completion.blink",
           score_offset = 100,
         },
-        lazydev = {
-          name = "LazyDev",
-          module = "lazydev.integrations.blink",
-          score_offset = 100,
-        },
       },
-      default = { 'dadbod', 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'dadbod', 'lsp', 'path', 'snippets', 'buffer' },
     },
     keymap = {
       ['<Tab>'] = { 'select_and_accept', 'snippet_forward', 'fallback' },
@@ -25,18 +20,5 @@ return {
       ['<C-k>'] = { 'select_prev' },
     },
     signature = { enabled = true },
-    completion = {
-      menu = {
-        draw = {
-          columns = { { "kind_icon" }, { "label", gap = 1 } },
-          components = {
-            label = {
-              text = require("colorful-menu").blink_components_text,
-              highlight = require("colorful-menu").blink_components_highlight,
-            },
-          },
-        },
-      },
-    },
   }
 }
