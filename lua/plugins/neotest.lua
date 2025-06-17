@@ -1,5 +1,5 @@
 return {
-  "nvim-neotest/neotest",
+  "letieu/neotest",
   dependencies = {
     "nvim-neotest/nvim-nio",
     "nvim-lua/plenary.nvim",

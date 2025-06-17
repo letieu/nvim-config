@@ -12,15 +12,15 @@ local function config_nodejs()
   local dap = require("dap")
   for _, language in ipairs({ "typescript", "javascript" }) do
     dap.configurations[language] = {
-{
-        type = "pwa-node",
-        request = "launch",
-        name = "Launch NestJS Auth backend",
-        program  = "/home/tieu/code/ONE/om-com-auth-backend/dist/apps/om-com-auth-backend/main.js",
-        cwd = "${workspaceFolder}",
-        runtimeArgs = { "--inspect" },
-        sourceMaps = true,
-        protocol = "inspector",
+      {
+        type                      = "pwa-node",
+        request                   = "launch",
+        name                      = "Launch NestJS Auth backend",
+        program                   = "/home/tieu/code/ONE/om-com-auth-backend/dist/apps/om-com-auth-backend/main.js",
+        cwd                       = "${workspaceFolder}",
+        runtimeArgs               = { "--inspect" },
+        sourceMaps                = true,
+        protocol                  = "inspector",
         resolveSourceMapLocations = {
           "${workspaceFolder}/**",
           "!**/node_modules/**",

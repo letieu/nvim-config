@@ -15,7 +15,19 @@ return {
     priority = 1000,    -- needs to be loaded in first
     config = function()
       require('tiny-inline-diagnostic').setup()
-      vim.diagnostic.config({ virtual_text = false })   -- Only if needed in your configuration, if you already have native LSP diagnostics
+      vim.diagnostic.config({ virtual_text = false }) -- Only if needed in your configuration, if you already have native LSP diagnostics
     end
+  },
+  {
+    "mistweaverco/kulala.nvim",
+    ft = { "http", "rest" },
+    opts = {
+      -- your configuration comes here
+      global_keymaps = true,
+    },
+  },
+  {
+    "mason-org/mason.nvim",
+    opts = {}
   }
 }

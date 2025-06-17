@@ -20,4 +20,4 @@ require("lazy").setup "plugins"
 require "autocmd"
 require "mappings"
 
-vim.lsp.enable({ 'gopls', 'ts_ls', 'eslint', 'lua_ls' })
+vim.lsp.enable({ 'gopls', 'ts_ls', 'eslint', 'lua_ls', 'templ' })
