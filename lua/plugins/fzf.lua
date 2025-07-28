@@ -3,7 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
     desc     = "fzf-lua defaults with `sk` as binary",
-    fzf_bin  = "sk",
+    -- fzf_bin  = "fzf",
     fzf_opts = {
       ["--no-separator"] = false,
       ['--history'] = vim.fn.stdpath("data") .. '/fzf-lua-history',
