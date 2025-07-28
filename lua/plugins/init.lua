@@ -29,5 +29,9 @@ return {
   {
     "mason-org/mason.nvim",
     opts = {}
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
+    cmd = { "ColorizerToggle" }
   }
 }
