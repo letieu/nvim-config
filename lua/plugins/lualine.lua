@@ -1,8 +1,20 @@
-local function mark_status()
+local function buf_mark_status()
   local marks = vim.fn.getmarklist(vim.fn.bufnr "%")
   local result = {}
   for _, mark in ipairs(marks) do
     if mark.mark:match "[a-z]" then
+      table.insert(result, mark.mark)
+    end
+  end
+
+  return table.concat(result, " ")
+end
+
+local function global_mark_status()
+  local marks = vim.fn.getmarklist()
+  local result = {}
+  for _, mark in ipairs(marks) do
+    if mark.mark:match "[A-Z]" then
       table.insert(result, mark.mark)
     end
   end
@@ -32,7 +44,9 @@ return {
           "%=",
           "grapple",
           "filename",
-          mark_status,
+          buf_mark_status,
+          " ",
+          global_mark_status,
         },
         lualine_x = {
           "filetype",
