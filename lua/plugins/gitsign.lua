@@ -21,13 +21,13 @@ return {
     {
       "]h",
       function()
-        require("gitsigns").nav_hunk()
+        require("gitsigns").next_hunk()
       end,
     },
     {
       "[h",
       function()
-        require("gitsigns").nav_hunk()
+        require("gitsigns").prev_hunk()
       end,
     },
     {
