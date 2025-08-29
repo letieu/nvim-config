@@ -1,7 +1,5 @@
 return {
   'isakbm/gitgraph.nvim',
-  -- 'letieu/gitgraph.nvim',
-  -- dir = "/home/tieu/code/github/letieu/gitgraph.nvim",
   dependencies = { 'sindrets/diffview.nvim' },
   config = function()
     vim.wo.spell = false
