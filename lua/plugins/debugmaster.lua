@@ -34,6 +34,10 @@ return {
           cwd                       = "${workspaceFolder}",
           sourceMaps                = true,
           protocol                  = "inspector",
+
+          -- localRoot                 = vim.fn.getcwd(),  -- your project path locally
+          -- remoteRoot                = "/home/deployer/corgi/corgi.creator-be", -- same project path on server
+
           resolveSourceMapLocations = {
             "${workspaceFolder}/**",
             "!**/node_modules/**",
@@ -41,6 +45,8 @@ return {
 
         }
       }
+
+      dap.configurations.javascript = dap.configurations.typescript
     end
   }
 }
