@@ -9,5 +9,15 @@ return {
     "mistweaverco/kulala.nvim",
     ft = { "http", "rest" },
     opts = { global_keymaps = true },
-  }
+  },
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({
+        keymaps = {
+          accept_suggestion = "<C-,>",
+        },
+      })
+    end,
+  },
 }

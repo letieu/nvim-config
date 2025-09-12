@@ -15,14 +15,3 @@ vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, {})
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
-
-vim.keymap.set("i", "<C-,>", function()
-  if not vim.lsp.inline_completion.get() then
-    return "<C-,>"
-  end
-end, {
-  expr = true,
-  replace_keycodes = true,
-  desc = "Get the current inline completion",
-})
-
