@@ -11,13 +11,12 @@ return {
     opts = { global_keymaps = true },
   },
   {
-    "supermaven-inc/supermaven-nvim",
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy",
+    priority = 1000,
     config = function()
-      require("supermaven-nvim").setup({
-        keymaps = {
-          accept_suggestion = "<C-,>",
-        },
-      })
+      require("tiny-inline-diagnostic").setup()
+      vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
     end,
   },
 }

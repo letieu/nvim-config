@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>", nore_and_silent)
 vim.keymap.set("n", "<leader>f", vim.diagnostic.open_float, nore_and_silent)
 vim.keymap.set("n", "<leader>mc", ":delmarks a-z<CR>", nore_and_silent)
 
+-- :h lsp-defaults
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, {})

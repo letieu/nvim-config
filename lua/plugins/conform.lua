@@ -17,7 +17,7 @@ return {
         sql = { "sqlfmt" },
         go = { "gofmt", "goimports" },
         nix = { "nixpkgs-fmt" },
-        xml = { "prettier" },
+        xml = { "xmllint" },
       },
     }
   end,
