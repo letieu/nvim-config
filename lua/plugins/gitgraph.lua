@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   'isakbm/gitgraph.nvim',
   dependencies = { 'sindrets/diffview.nvim' },
@@ -39,12 +40,11 @@ return {
       },
       hooks = {
         on_select_commit = function(commit)
-          vim.notify('DiffviewOpen ' .. commit.hash .. '^!')
-          vim.cmd(':DiffviewOpen ' .. commit.hash .. '^!')
+          vim.cmd(':CodeDiff ' .. commit.hash .. '~1 ' .. commit.hash)
         end,
         on_select_range_commit = function(from, to)
-          vim.notify('DiffviewOpen ' .. from.hash .. '~1..' .. to.hash)
-          vim.cmd(':DiffviewOpen ' .. from.hash .. '~1..' .. to.hash)
+          vim.notify('CodeDiff ' .. from.hash .. ' ' .. to.hash)
+          vim.cmd(':CodeDiff ' .. from.hash .. ' ' .. to.hash)
         end,
       },
     })
