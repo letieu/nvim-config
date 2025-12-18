@@ -10,7 +10,7 @@ return {
     },
     winopts  = {
       preview = {
-        hidden = 'hidden', -- hidden|nohidden
+        -- hidden = 'hidden', -- hidden|nohidden
       },
     },
     lsp      = {

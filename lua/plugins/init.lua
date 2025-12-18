@@ -2,7 +2,6 @@
 -- For plugins that need custom configuration, create a new file in lua/plugins/
 return {
   { "windwp/nvim-autopairs",       config = true,              event = { "InsertEnter" } },
-  { 'akinsho/git-conflict.nvim',   config = true },
   { "mason-org/mason.nvim",        opts = {} },
   { "norcalli/nvim-colorizer.lua", cmd = { "ColorizerToggle" } },
   {
