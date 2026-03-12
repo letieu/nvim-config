@@ -3,7 +3,7 @@ return {
   dependencies = { "MunifTanjim/nui.nvim" },
   branch = 'next',
   config = function()
-    require('vscode-diff').setup({
+    require('codediff').setup({
     })
   end,
   lazy = false,

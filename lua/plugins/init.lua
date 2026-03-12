@@ -18,4 +18,20 @@ return {
       vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
     end,
   },
+  {
+    "letieu/jira.nvim",
+    -- dir = "~/code/personal/jira.nvim/",
+    config = function()
+      require("jira").setup({
+        projects = {
+          ["COM"] = {
+            story_point_field = "customfield_10023", -- Custom field ID for story points
+            custom_fields = {
+              { key = "customfield_10095", label = "Acceptance Criteria" }
+            }
+          }
+        },
+      })
+    end
+  },
 }

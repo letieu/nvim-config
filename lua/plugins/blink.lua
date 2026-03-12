@@ -10,8 +10,13 @@ return {
           module = "vim_dadbod_completion.blink",
           score_offset = 100,
         },
+        lazydev = {
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
+          score_offset = 100,
+        },
       },
-      default = { 'dadbod', 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'dadbod', 'lsp', 'path', 'snippets', 'buffer', 'lazydev' },
     },
     keymap = {
       ['<Tab>'] = { 'select_and_accept', 'snippet_forward', 'fallback' },

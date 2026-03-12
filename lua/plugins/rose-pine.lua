@@ -8,8 +8,8 @@ return {
       },
       styles = {
         bold = true,
-        italic = false,
-        transparency = false,
+        italic = true,
+        transparency = true,
       },
     })
 
