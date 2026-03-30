@@ -19,8 +19,8 @@ return {
     end,
   },
   {
-    "letieu/jira.nvim",
-    -- dir = "~/code/personal/jira.nvim/",
+    -- "letieu/jira.nvim",
+    dir = "~/code/personal/jira.nvim/",
     config = function()
       require("jira").setup({
         projects = {
@@ -34,4 +34,8 @@ return {
       })
     end
   },
+  {
+    "karb94/neoscroll.nvim",
+    config = true,
+  }
 }

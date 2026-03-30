@@ -1,10 +1,11 @@
 return {
   "letieu/99",
+  -- "ThePrimeagen/99",
   config = function()
     local _99 = require("99")
     _99.setup({
       provider = _99.OpenCodeProvider,
-      model = "google/antigravity-claude-sonnet-4-5",
+      model = "google/antigravity-gemini-3-flash",
       md_files = {
         "AGENT.md",
       },
