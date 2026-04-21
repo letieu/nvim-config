@@ -47,6 +47,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       })
 
       vim.bo.autocomplete = true
+      vim.keymap.set('n', '<leader>fm', function() vim.lsp.buf.format({async = true}) end)
     end
   end,
 })
@@ -94,3 +95,6 @@ vim.cmd("colorscheme rose-pine")
 
 -- undo tree
 vim.cmd("packadd nvim.undotree")
+
+-- gitsign
+vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
