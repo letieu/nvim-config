@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "fff.nvim": {
+      "rev": "cebacb3c35645a5036adda093d4332f6098865bd",
+      "src": "https://github.com/dmtrKovalenko/fff.nvim"
+    },
+    "neovim": {
+      "rev": "9504524e5ed0e326534698f637f9d038ba4cd0ee",
+      "src": "https://github.com/rose-pine/neovim"
+    },
+    "oil.nvim": {
+      "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
+      "src": "https://github.com/stevearc/oil.nvim"
+    }
+  }
+}
