@@ -47,12 +47,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
       })
 
       vim.bo.autocomplete = true
-      vim.keymap.set('n', '<leader>fm', function() vim.lsp.buf.format({async = true}) end)
+      vim.keymap.set('n', '<leader>fm', function() vim.lsp.buf.format({ async = true }) end)
     end
   end,
 })
 
-vim.lsp.enable({ 'gopls', 'vtsls', 'eslint', 'lua_ls', 'templ', 'zls', 'dartls', 'vue_ls', 'html', 'rust_analyzer', 'clangd' })
+vim.lsp.enable({ 'gopls', 'vtsls', 'eslint', 'lua_ls', 'templ', 'zls', 'dartls', 'vue_ls', 'html', 'rust_analyzer',
+  'clangd' })
 vim.keymap.set('n', '<leader>f', vim.diagnostic.open_float)
 
 require('vim._core.ui2').enable({})
@@ -98,3 +99,56 @@ vim.cmd("packadd nvim.undotree")
 
 -- gitsign
 vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
+require('gitsigns').setup {
+  on_attach = function(bufnr)
+    local gitsigns = require('gitsigns')
+
+    local function map(mode, l, r, opts)
+      opts = opts or {}
+      opts.buffer = bufnr
+      vim.keymap.set(mode, l, r, opts)
+    end
+
+    -- Navigation
+    map('n', ']c', function()
+      if vim.wo.diff then
+        vim.cmd.normal({ ']c', bang = true })
+      else
+        gitsigns.nav_hunk('next')
+      end
+    end)
+
+    map('n', '[c', function()
+      if vim.wo.diff then
+        vim.cmd.normal({ '[c', bang = true })
+      else
+        gitsigns.nav_hunk('prev')
+      end
+    end)
+
+    -- Actions
+    map('n', '<leader>hr', gitsigns.reset_hunk)
+    map('n', '<leader>hv', gitsigns.preview_hunk_inline)
+    map('n', '<leader>hb', function()
+      gitsigns.blame_line({ full = true })
+    end)
+
+    map('n', '<leader>hq', gitsigns.setqflist)
+    map('n', '<leader>hQ', function() gitsigns.setqflist('all') end)
+  end
+}
+
+vim.pack.add({ "https://github.com/mrjones2014/smart-splits.nvim" })
+require('smart-splits').setup({})
+
+
+vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
+vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
+vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
+vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
+
+-- moving between splits
+vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
+vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
+vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
+vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
