@@ -1,3 +1,7 @@
+if not string.find(vim.env.PATH or '', '/.cargo/bin') then
+  vim.env.PATH = vim.fn.expand('~/.cargo/bin') .. ':' .. (vim.env.PATH or '')
+end
+
 vim.g.mapleader = " "
 vim.opt.shortmess:append("c") -- Prevents showing extra messages when using completion
 vim.opt.cmdheight = 1
@@ -158,3 +162,24 @@ vim.pack.add({"https://github.com/nvim-treesitter/nvim-treesitter"})
 require('nvim-treesitter').setup {
   install_dir = vim.fn.stdpath('data') .. '/site'
 }
+
+-- dadbod
+vim.g.db_ui_use_nerd_fonts = 1
+
+vim.pack.add({
+  'https://github.com/tpope/vim-dadbod',
+  'https://github.com/kristijanhusak/vim-dadbod-ui',
+  'https://github.com/kristijanhusak/vim-dadbod-completion',
+})
+
+vim.keymap.set('n', '<leader>db', '<CMD>DBUIToggle<CR>', { desc = 'Toggle DBUI' })
+
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('dadbod_ui', { clear = true }),
+  pattern = { 'sql', 'mysql', 'plsql' },
+  callback = function()
+    vim.bo.omnifunc = 'vim_dadbod_completion#omni'
+    vim.keymap.set('n', '<leader>r', 'vip<Plug>(DBUI_ExecuteQuery)', { remap = true, buffer = true, desc = 'Execute query under cursor' })
+    vim.keymap.set('v', '<leader>r', '<Plug>(DBUI_ExecuteQuery)', { remap = true, buffer = true, desc = 'Execute selected query' })
+  end,
+})
