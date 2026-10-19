@@ -86,8 +86,9 @@ return {
     -- manager lock file.
     local root_markers = { 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml', 'bun.lockb', 'bun.lock' }
     -- Give the root markers equal priority by wrapping them in a table
-    root_markers = vim.fn.has('nvim-0.11.3') == 1 and { root_markers, { '.git' } }
-      or vim.list_extend(root_markers, { '.git' })
+    root_markers = vim.fn.has('nvim-0.11.3') == 1
+        and { root_markers, { '.git' }, { 'tsconfig.json', 'jsconfig.json', 'package.json' } }
+      or vim.list_extend(root_markers, { '.git', 'tsconfig.json', 'jsconfig.json', 'package.json' })
     -- exclude deno
     local deno_root = vim.fs.root(bufnr, { 'deno.json', 'deno.jsonc' })
     local deno_lock_root = vim.fs.root(bufnr, { 'deno.lock' })

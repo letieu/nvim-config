@@ -1,6 +1,10 @@
 if not string.find(vim.env.PATH or '', '/.cargo/bin') then
   vim.env.PATH = vim.fn.expand('~/.cargo/bin') .. ':' .. (vim.env.PATH or '')
 end
+if not string.find(vim.env.PATH or '', '/go/bin') then
+  vim.env.PATH = vim.fn.expand('~/go/bin') .. ':' .. (vim.env.PATH or '')
+end
+
 
 vim.g.mapleader = " "
 vim.opt.shortmess:append("c") -- Prevents showing extra messages when using completion
@@ -19,6 +23,8 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.smarttab = true
+vim.opt.splitright = true -- Put new vertical splits to the right
+vim.opt.splitbelow = true -- Put new horizontal splits below
 
 local my_group_id = vim.api.nvim_create_augroup('my.config', {
   clear = false
@@ -36,7 +42,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.opt.completeopt = "menu,menuone,noselect,popup"
 
 vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup("lsp_completion", { clear = true }),
+  group = vim.api.nvim_create_augroup("lsp_attach_config", { clear = true }),
   callback = function(args)
     local client_id = args.data.client_id
     if not client_id then
@@ -44,14 +50,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
     local client = vim.lsp.get_client_by_id(client_id)
-    if client and client:supports_method("textDocument/completion") then
+    if not client then
+      return
+    end
+
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf, desc = 'LSP: Go to definition' })
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = args.buf, desc = 'LSP: Go to declaration' })
+    vim.keymap.set('n', '<leader>fm', function() vim.lsp.buf.format({ async = true }) end, { buffer = args.buf, desc = 'LSP: Format buffer' })
+
+    if client:supports_method("textDocument/completion") then
       -- Enable native LSP completion for this client + buffer
       vim.lsp.completion.enable(true, client_id, args.buf, {
         autotrigger = true,
       })
 
       vim.bo.autocomplete = true
-      vim.keymap.set('n', '<leader>fm', function() vim.lsp.buf.format({ async = true }) end)
     end
   end,
 })
@@ -181,5 +194,28 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.bo.omnifunc = 'vim_dadbod_completion#omni'
     vim.keymap.set('n', '<leader>r', 'vip<Plug>(DBUI_ExecuteQuery)', { remap = true, buffer = true, desc = 'Execute query under cursor' })
     vim.keymap.set('v', '<leader>r', '<Plug>(DBUI_ExecuteQuery)', { remap = true, buffer = true, desc = 'Execute selected query' })
+  end,
+})
+
+-- rest.nvim
+package.path = package.path
+  .. ';' .. vim.fn.stdpath('data') .. '/site/pack/core/opt/xml2lua/?.lua'
+  .. ';' .. vim.fn.stdpath('data') .. '/site/pack/core/opt/mimetypes/?.lua'
+
+vim.pack.add({
+  'https://github.com/nvim-neotest/nvim-nio',
+  'https://github.com/j-hui/fidget.nvim',
+  'https://github.com/manoelcampos/xml2lua',
+  { src = 'https://github.com/lunarmodules/lua-mimetypes', name = 'mimetypes' },
+  'https://github.com/rest-nvim/rest.nvim',
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('rest_nvim_config', { clear = true }),
+  pattern = { 'http' },
+  callback = function(args)
+    vim.keymap.set('n', '<leader>rr', '<CMD>Rest run<CR>', { buffer = args.buf, desc = 'REST: Run request under cursor' })
+    vim.keymap.set('n', '<leader>rl', '<CMD>Rest run last<CR>', { buffer = args.buf, desc = 'REST: Re-run last request' })
+    vim.keymap.set('n', '<leader>ro', '<CMD>vertical Rest open<CR>', { buffer = args.buf, desc = 'REST: Open result pane' })
   end,
 })
